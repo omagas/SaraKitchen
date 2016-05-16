@@ -6060,3 +6060,10 @@ SERVICE ICON LAYOUT
 .header-logo-container img {
     width: 300px;
 }
+
+
+/*search*/
+search.search-active {
+    opacity: 1;
+    z-index: 9999;
+}
