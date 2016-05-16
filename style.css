@@ -465,10 +465,10 @@ input[type="email"],
 input[type="url"],
 input[type="password"],
 input[type="search"], input[type="tel"] {
-    color: #666;
-    border: 1px solid #ccc;
+    color: #ffffff;
+    border: 1px solid #5a40a0;
     height: 36px;
-    width: 100%;
+    /* width: 100%; */
     -webkit-appearance: none;
 }
 
@@ -1660,12 +1660,12 @@ Top Header CSS
     z-index: 9999;
 }
 .aglee-search {
-    background: rgba(0, 0, 0, 0.5);
+    /* background: rgba(0, 0, 0, 0.5); */
     line-height: 79px;
     opacity: 0;
     overflow: hidden;
     padding: 0 8px 4px;
-    position: absolute;
+    /* position: absolute; */
     right: -20px;
     top: 35px;
     transition: all 0.5s ease 0s;
@@ -1679,14 +1679,15 @@ Top Header CSS
     width: 90%;
 }
 .aglee-search form input[type='search'] {
-    height: 50px;
-    margin-top: 0;
+    /* height: 50px; */
+    margin-top: 25px;
     font-size: 18px;
-    border: none;
-    border-radius: 3px;
+    /* border: none; */
+    float: right;
+    border-radius: 10px;
 }
 .aglee-search .search-form > input[type='submit']{
-    background: #3b73a7 none repeat scroll 0 0;
+    background: #5a40a0 none repeat scroll 0 0;
     color: #fff;
     line-height: 10px;
     margin-left: 6px;
@@ -1695,14 +1696,15 @@ Top Header CSS
     cursor: pointer;
     transition: all 0.5s ease 0s;
     -webkit-transition: all 0.5s ease 0s;
-    height: 50px;
+    height: 35px;
     width: 9%;
     font-size: 18px;
     border: none;
     border-radius: 3px;
 }
 .aglee-search .search-form > input[type='submit']:hover{
-    background: #225e96;
+    background: #5a40a0;
+    /* height: 20px; */
 }
 
 .right-top-head .call-us .widget, .social-icons-head .widget{
