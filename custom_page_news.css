@@ -1,0 +1,50 @@
+
+/*new list bootstrap*/
+.media-body, .media-left, .media-right {
+    display: table-cell;
+    vertical-align: top;
+}
+.media{
+    margin-bottom: 50px;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.media-heading>span {
+    font-size: x-small;  
+}
+
+.media-heading {
+    border-bottom-style: ridge;
+    height: 30px;
+    padding-bottom: 5px;
+}
+
+
+.media-body {
+    width: 100%;
+padding-left: 20px;
+}
+
+
+span.media-heading-left {
+    float: left;
+    font-size: large;
+}
+
+span.media-heading-right {
+    float: right;
+}
+
+.welcome-col1 h2 {
+    padding-left: 20%;
+}
+
+
+img.attachment-article-post-thumbnail.wp-post-image {
+    border-radius: 200px 200px 200px 200px;
+    -moz-border-radius: 200px 200px 200px 200px;
+    -webkit-border-radius: 200px 200px 200px 200px;
+    border: 6px solid #fff;
+}
+/*END new list bootstrap*/
