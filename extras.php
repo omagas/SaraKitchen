@@ -392,7 +392,7 @@ add_action('aglee_pro_noslider', 'aglee_pro_nosliderdb');
                 $video_feat = get_post_meta( $feat_video_id_home, 'ag_featured_video_id', true );
                 ?>
                 <div class="feat_video">
-                    <?php echo do_shortcode('[video src="'.$myvals.'" autoplay="off"][/video]');  ?>
+                    <?php echo do_shortcode('[video src="'.$myvals.'"][/video]');  ?>
                 </div>
                 <div class="feat_video_content wow fadeInRight" data-wow-delay="0.3s">
                     <h2><?php echo $my_title; ?></h2>
