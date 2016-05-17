@@ -14,60 +14,60 @@
  * @return array
  */
 function aglee_pro_body_classes( $classes ) {
-	// Adds a class of group-blog to blogs with more than 1 published author.
-	if ( is_multi_author() ) {
-		$classes[] = 'group-blog';
-	}
+    // Adds a class of group-blog to blogs with more than 1 published author.
+    if ( is_multi_author() ) {
+        $classes[] = 'group-blog';
+    }
 
-	return $classes;
+    return $classes;
 }
 add_filter( 'body_class', 'aglee_pro_body_classes' );
 
 if ( version_compare( $GLOBALS['wp_version'], '4.1', '<' ) ) :
-	/**
-	 * Filters wp_title to print a neat <title> tag based on what is being viewed.
-	 *
-	 * @param string $title Default title text for current view.
-	 * @param string $sep Optional separator.
-	 * @return string The filtered title.
-	 */
-	function aglee_pro_wp_title( $title, $sep ) {
-		if ( is_feed() ) {
-			return $title;
-		}
+    /**
+     * Filters wp_title to print a neat <title> tag based on what is being viewed.
+     *
+     * @param string $title Default title text for current view.
+     * @param string $sep Optional separator.
+     * @return string The filtered title.
+     */
+    function aglee_pro_wp_title( $title, $sep ) {
+        if ( is_feed() ) {
+            return $title;
+        }
 
-		global $page, $paged;
+        global $page, $paged;
 
-		// Add the blog name.
-		$title .= get_bloginfo( 'name', 'display' );
+        // Add the blog name.
+        $title .= get_bloginfo( 'name', 'display' );
 
-		// Add the blog description for the home/front page.
-		$site_description = get_bloginfo( 'description', 'display' );
-		if ( $site_description && ( is_home() || is_front_page() ) ) {
-			$title .= " $sep $site_description";
-		}
+        // Add the blog description for the home/front page.
+        $site_description = get_bloginfo( 'description', 'display' );
+        if ( $site_description && ( is_home() || is_front_page() ) ) {
+            $title .= " $sep $site_description";
+        }
 
-		// Add a page number if necessary.
-		if ( ( $paged >= 2 || $page >= 2 ) && ! is_404() ) {
-			$title .= " $sep " . sprintf( esc_html__( 'Page %s', 'aglee-pro' ), max( $paged, $page ) );
-		}
+        // Add a page number if necessary.
+        if ( ( $paged >= 2 || $page >= 2 ) && ! is_404() ) {
+            $title .= " $sep " . sprintf( esc_html__( 'Page %s', 'aglee-pro' ), max( $paged, $page ) );
+        }
 
-		return $title;
-	}
-	add_filter( 'wp_title', 'aglee_pro_wp_title', 10, 2 );
+        return $title;
+    }
+    add_filter( 'wp_title', 'aglee_pro_wp_title', 10, 2 );
 
-	/**
-	 * Title shim for sites older than WordPress 4.1.
-	 *
-	 * @link https://make.wordpress.org/core/2014/10/29/title-tags-in-4-1/
-	 * @todo Remove this function when WordPress 4.3 is released.
-	 */
-	function aglee_pro_render_title() {
-		?>
-		<title><?php wp_title( '|', true, 'right' ); ?></title>
-		<?php
-	}
-	add_action( 'wp_head', 'aglee_pro_render_title' );
+    /**
+     * Title shim for sites older than WordPress 4.1.
+     *
+     * @link https://make.wordpress.org/core/2014/10/29/title-tags-in-4-1/
+     * @todo Remove this function when WordPress 4.3 is released.
+     */
+    function aglee_pro_render_title() {
+        ?>
+        <title><?php wp_title( '|', true, 'right' ); ?></title>
+        <?php
+    }
+    add_action( 'wp_head', 'aglee_pro_render_title' );
 endif;
 
 /** Slider Code Start **/
@@ -423,19 +423,19 @@ function aglee_pro_calltoaction_home_cb(){
     <div id="cta-container">
     <div class="cta-wrap clearfix">
         <div class="ap-container">
-           	<div class="cta-desc-wrap wow fadeInUp">
+            <div class="cta-desc-wrap wow fadeInUp">
                 <h2 class="cta_title">
                 <?php echo esc_attr($aglee_pro_cta_title); ?>
                 </h2>
                 <div class="cta_descr">
                     <?php echo esc_textarea($aglee_pro_cta_content); ?>
                 </div>
-           	</div>
+            </div>
             <div class="cta-btn-wrap wow slideInRight">
-               	<a href="<?php echo esc_url($aglee_pro_cat_readmorelink); ?>" target="_blank">
+                <a href="<?php echo esc_url($aglee_pro_cat_readmorelink); ?>" target="_blank">
                     <?php echo __($aglee_pro_cat_readmoretext,'aglee-pro'); ?>
                 </a>
-     	 	</div>
+            </div>
         </div>
     </div>
     </div> <!-- end of section -->
@@ -446,9 +446,9 @@ function aglee_pro_calltoaction_home_cb(){
 
 
 /** Team home section **/
-
+/*
 function aglee_pro_team_section_home_cb(){
-    $team_title = get_theme_mod('team_home_title_setting');
+    //$team_title = get_theme_mod('team_home_title_setting');
     $team_desc = get_theme_mod('team_home_content_setting');
     $team_post_1 = get_theme_mod('home_team_one_setting');
     $team_post_2 = get_theme_mod('home_team_two_setting');
@@ -459,7 +459,7 @@ function aglee_pro_team_section_home_cb(){
     <?php 
         if(($team_post_1 != '0') || ($team_post_2 != '0') || ($team_post_3 != '0') ) : ?>
         <div class="team-container">
-        <h2 class="wow fadeInUp"><?php echo __($team_title); ?></h2>
+        <h2 class="wow fadeInUp"><?php //echo __($team_title); ?>最新文章</h2>
         <p class="wow fadeInUp"><?php echo __($team_desc); ?></p>
         <?php
             if($team_post_1 != '0'):
@@ -525,6 +525,134 @@ function aglee_pro_team_section_home_cb(){
                                 <div class="team_designation_home"><?php echo $team_designation_three; ?></div>
                             </div>
                             <div class="team_short_content_home"><?php echo $team_short_desc_three; ?></div>
+                        </div>
+                     </a>
+                </div>
+                <?php 
+                endif; // third team section
+                
+    echo '</div>';
+        endif; // Feature posts empty 
+        } // checking empty Team posts  
+}
+*/
+function aglee_pro_team_section_home_cb(){
+    //$team_title = get_theme_mod('team_home_title_setting');
+
+    query_posts('showposts=3&orderby=time&category_name=article&paged=$page');
+    while ( have_posts() ) : the_post();
+        //echo '<li>';
+        
+        $my_title1=get_the_title();//hao add title
+        $my_content1=get_the_content('Read more...');//hao add content
+        $permalink1=get_the_permalink();//hao add content
+        //echo '</li>';
+
+    endwhile; 
+
+    wp_reset_query();
+
+    query_posts('showposts=2&orderby=time&category_name=article&paged=$page');
+    while ( have_posts() ) : the_post();
+        //echo '<li>';
+        
+        $my_title2=get_the_title();//hao add title
+        $my_content2=get_the_content('Read more...');//hao add content
+        $permalink2=get_the_permalink();//hao add content
+        //echo '</li>';
+
+    endwhile; 
+
+
+     query_posts('showposts=1&orderby=time&category_name=article&paged=$page');
+    while ( have_posts() ) : the_post();
+        //echo '<li>';
+        
+        $my_title3=get_the_title();//hao add title
+        $my_content3=get_the_content('Read more...');//hao add content
+        $permalink3=get_the_permalink();//hao add content
+        //echo '</li>';
+
+    endwhile;    
+
+    wp_reset_query();
+
+    $team_desc = get_theme_mod('team_home_content_setting');
+    $team_post_1 = get_theme_mod('home_team_one_setting');
+    $team_post_2 = get_theme_mod('home_team_two_setting');
+    $team_post_3 = get_theme_mod('home_team_three_setting');
+    $team_posts = wp_count_posts('custom-team');
+    if($team_posts->publish != '0'){
+    ?>
+    <?php 
+        if(($my_title1 != '') || ($my_title2  != '') || ($my_title3  != '') ) : ?>
+        <div class="team-container">
+        <h2 class="wow fadeInUp"><?php //echo __($team_title); ?>最新文章</h2>
+        <p class="wow fadeInUp"><?php echo __($team_desc); ?></p>
+        <?php
+            if($my_title1 != ''):
+            ?>
+                <div class="team-wrapper-block clearfix wow fadeInUp"  data-wow-duration="1s">
+                    <?php 
+                        $img_one = wp_get_attachment_image_src(get_post_thumbnail_id($team_post_1),'team-home-img', true);
+                        $team_name_one = get_post_meta( $team_post_1, 'ag_team_designation', true );
+                        $team_designation_one = get_the_title($team_post_1);
+                        $team_short_desc_one = wp_trim_words(get_post_field('post_content', $team_post_1),20);
+                     ?>
+                    <a href="<?php echo $permalink1; ?>">
+                        <div class="team_post">
+                            <img src="<?php echo esc_url($img_one[0]);?>"/>
+                            <div class="main_team_cont">
+                                <div class="team_title_home"><?php echo $my_title1; ?></div>
+                               
+                            </div>
+                            <div class="team_short_content_home"><?php echo $my_content1; ?></div>
+                        </div>
+                    </a>
+                </div>
+                <?php 
+                endif; // first team section
+                
+                if( $my_title2  != '0' ):
+                ?>
+                <div class="team-wrapper-block clearfix wow fadeInUp"  data-wow-duration="1s">
+                    <?php
+                        $img_two = wp_get_attachment_image_src(get_post_thumbnail_id($team_post_2),'team-home-img', true);
+                        $team_name_two = get_post_meta( $team_post_2, 'ag_team_designation', true );
+                        $team_designation_two = get_the_title($team_post_2);
+                        $team_short_desc_two = wp_trim_words(get_post_field('post_content', $team_post_2),20);
+                     ?>
+                    <a href="<?php echo $permalink2; ?>"> 
+                        <div class="team_post">
+                            <img src="<?php echo $img_two[0];?>"/>
+                            <div class="main_team_cont">
+                                <div class="team_title_home"><?php echo $my_title2; ?></div>
+                                
+                            </div>
+                            <div class="team_short_content_home"><?php echo $my_content2; ?></div>
+                        </div>
+                    </a>
+                </div>
+                <?php 
+                endif; // second team section
+                
+                if($my_title3  != '0'):
+                ?>
+                <div class="team-wrapper-block clearfix clearfix wow fadeInUp"  data-wow-duration="1.5s">
+                    <?php
+                        $img_three = wp_get_attachment_image_src(get_post_thumbnail_id($team_post_3),'team-home-img', true);
+                        $team_name_three = get_post_meta( $team_post_3, 'ag_team_designation', true );
+                        $team_designation_three = get_the_title($team_post_3);
+                        $team_short_desc_three = wp_trim_words(get_post_field('post_content', $team_post_3),20);
+                     ?>
+                     <a href="<?php echo $permalink3; ?>">
+                        <div class="team_post">
+                            <img src="<?php echo $img_three[0];?>"/>
+                            <div class="main_team_cont">
+                                <div class="team_title_home"><?php echo $my_title3; ?></div>
+                                
+                            </div>
+                            <div class="team_short_content_home"><?php echo $my_content3; ?></div>
                         </div>
                      </a>
                 </div>
@@ -651,7 +779,7 @@ add_action('aglee_pro_team_home_section','aglee_pro_team_section_home_cb');
                                 ?></a>
                             </span>
                         </div>
-                	</div><!-- .entry-content -->
+                    </div><!-- .entry-content -->
                 <?php
                 $blog_count++;
                  }} ?>
@@ -1000,7 +1128,7 @@ add_action('aglee_pro_team_home_section','aglee_pro_team_section_home_cb');
         $showCurrent = 1; // 1 - show current post/page title in breadcrumbs, 0 - don't show
         $before = '<span class="current">'; // tag before the current crumb
         $after = '</span>'; // tag after the current crumb
-    	  
+          
         $homeLink = esc_url(home_url());
         
         
@@ -1031,91 +1159,91 @@ add_action('aglee_pro_team_home_section','aglee_pro_team_section_home_cb');
         } } 
         else {
             echo '<div id="aglee-breadcrumbs"><div class="ap-container"><a href="' . $homeLink . '">' . $home . '</a> ' . $delimiter . ' ';
-    	  
-    	    if ( is_category() ) {
-    	      $thisCat = get_category(get_query_var('cat'), false);
-    	      if ($thisCat->parent != 0) echo get_category_parents($thisCat->parent, TRUE, ' ' . $delimiter . ' ');
-    	      echo $before . 'Archive by category "' . single_cat_title('', false) . '"' . $after;
-    	  
-    	    } elseif ( is_search() ) {
-    	      echo $before . 'Search results for "' . get_search_query() . '"' . $after;
-    	  
-    	    } elseif ( is_day() ) {
-    	      echo '<a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time('Y') . '</a> ' . $delimiter . ' ';
-    	      echo '<a href="' . get_month_link(get_the_time('Y'),get_the_time('m')) . '">' . get_the_time('F') . '</a> ' . $delimiter . ' ';
-    	      echo $before . get_the_time('d') . $after;
-    	  
-    	    } elseif ( is_month() ) {
-    	      echo '<a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time('Y') . '</a> ' . $delimiter . ' ';
-    	      echo $before . get_the_time('F') . $after;
-    	  
-    	    } elseif ( is_year() ) {
-    	      echo $before . get_the_time('Y') . $after;
-    	  
-    	    } elseif ( is_single() && !is_attachment() ) {
-    	      if ( get_post_type() != 'post' ) {
-    	        $post_type = get_post_type_object(get_post_type());
-    	        $slug = $post_type->rewrite;
-    	        echo '<a href="' . $homeLink . '/' . $slug['slug'] . '/">' . $post_type->labels->singular_name . '</a>';
-    	        if ($showCurrent == 1) echo ' ' . $delimiter . ' ' . $before . get_the_title() . $after;
-    	      } else {
-    	        $cat = get_the_category(); $cat = $cat[0];
-    	        $cats = get_category_parents($cat, TRUE, ' ' . $delimiter . ' ');
-    	        if ($showCurrent == 0) $cats = preg_replace("#^(.+)\s$delimiter\s$#", "$1", $cats);
-    	        echo $cats;
-    	        if ($showCurrent == 1) echo $before . get_the_title() . $after;
-    	      }
-    	  
-    	    } elseif ( !is_single() && !is_page() && get_post_type() != 'post' && !is_404() ) {
-    	      $post_type = get_post_type_object(get_post_type());
-    	      echo $before . $post_type->labels->singular_name . $after;
-    	  
-    	    } elseif ( is_attachment() ) {
-    	      $parent = get_post($post->post_parent);
-    	      $cat = get_the_category($parent->ID); $cat = $cat[0];
-    	      echo get_category_parents($cat, TRUE, ' ' . $delimiter . ' ');
-    	      echo '<a href="' . get_permalink($parent) . '">' . $parent->post_title . '</a>';
-    	      if ($showCurrent == 1) echo ' ' . $delimiter . ' ' . $before . get_the_title() . $after;
-    	  
-    	    } elseif ( is_page() && !$post->post_parent ) {
-    	      if ($showCurrent == 1) echo $before . get_the_title() . $after;
-    	  
-    	    } elseif ( is_page() && $post->post_parent ) {
-    	      $parent_id  = $post->post_parent;
-    	      $breadcrumbs = array();
-    	      while ($parent_id) {
-    	        $page = get_page($parent_id);
-    	        $breadcrumbs[] = '<a href="' . get_permalink($page->ID) . '">' . get_the_title($page->ID) . '</a>';
-    	        $parent_id  = $page->post_parent;
-    	      }
-    	      $breadcrumbs = array_reverse($breadcrumbs);
-    	      for ($i = 0; $i < count($breadcrumbs); $i++) {
-    	        echo $breadcrumbs[$i];
-    	        if ($i != count($breadcrumbs)-1) echo ' ' . $delimiter . ' ';
-    	      }
-    	      if ($showCurrent == 1) echo ' ' . $delimiter . ' ' . $before . get_the_title() . $after;
-    	  
-    	    } elseif ( is_tag() ) {
-    	      echo $before . 'Posts tagged "' . single_tag_title('', false) . '"' . $after;
-    	  
-    	    } elseif ( is_author() ) {
-    	       global $author;
-    	      $userdata = get_userdata($author);
-    	      echo $before . 'Articles posted by ' . $userdata->display_name . $after;
-    	  
-    	    } elseif ( is_404() ) {
-    	      echo $before . 'Error 404' . $after;
-    	    }
-    	  
-    	    if ( get_query_var('paged') ) {
-    	      if ( is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author() ) echo ' (';
-    	      echo __('Page' , 'accesspress-basic') . ' ' . get_query_var('paged');
-    	      if ( is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author() ) echo ')';
-    	    }
- 	     
-    	    echo '</div></div>';
- 	     
-    	  }
+          
+            if ( is_category() ) {
+              $thisCat = get_category(get_query_var('cat'), false);
+              if ($thisCat->parent != 0) echo get_category_parents($thisCat->parent, TRUE, ' ' . $delimiter . ' ');
+              echo $before . 'Archive by category "' . single_cat_title('', false) . '"' . $after;
+          
+            } elseif ( is_search() ) {
+              echo $before . 'Search results for "' . get_search_query() . '"' . $after;
+          
+            } elseif ( is_day() ) {
+              echo '<a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time('Y') . '</a> ' . $delimiter . ' ';
+              echo '<a href="' . get_month_link(get_the_time('Y'),get_the_time('m')) . '">' . get_the_time('F') . '</a> ' . $delimiter . ' ';
+              echo $before . get_the_time('d') . $after;
+          
+            } elseif ( is_month() ) {
+              echo '<a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time('Y') . '</a> ' . $delimiter . ' ';
+              echo $before . get_the_time('F') . $after;
+          
+            } elseif ( is_year() ) {
+              echo $before . get_the_time('Y') . $after;
+          
+            } elseif ( is_single() && !is_attachment() ) {
+              if ( get_post_type() != 'post' ) {
+                $post_type = get_post_type_object(get_post_type());
+                $slug = $post_type->rewrite;
+                echo '<a href="' . $homeLink . '/' . $slug['slug'] . '/">' . $post_type->labels->singular_name . '</a>';
+                if ($showCurrent == 1) echo ' ' . $delimiter . ' ' . $before . get_the_title() . $after;
+              } else {
+                $cat = get_the_category(); $cat = $cat[0];
+                $cats = get_category_parents($cat, TRUE, ' ' . $delimiter . ' ');
+                if ($showCurrent == 0) $cats = preg_replace("#^(.+)\s$delimiter\s$#", "$1", $cats);
+                echo $cats;
+                if ($showCurrent == 1) echo $before . get_the_title() . $after;
+              }
+          
+            } elseif ( !is_single() && !is_page() && get_post_type() != 'post' && !is_404() ) {
+              $post_type = get_post_type_object(get_post_type());
+              echo $before . $post_type->labels->singular_name . $after;
+          
+            } elseif ( is_attachment() ) {
+              $parent = get_post($post->post_parent);
+              $cat = get_the_category($parent->ID); $cat = $cat[0];
+              echo get_category_parents($cat, TRUE, ' ' . $delimiter . ' ');
+              echo '<a href="' . get_permalink($parent) . '">' . $parent->post_title . '</a>';
+              if ($showCurrent == 1) echo ' ' . $delimiter . ' ' . $before . get_the_title() . $after;
+          
+            } elseif ( is_page() && !$post->post_parent ) {
+              if ($showCurrent == 1) echo $before . get_the_title() . $after;
+          
+            } elseif ( is_page() && $post->post_parent ) {
+              $parent_id  = $post->post_parent;
+              $breadcrumbs = array();
+              while ($parent_id) {
+                $page = get_page($parent_id);
+                $breadcrumbs[] = '<a href="' . get_permalink($page->ID) . '">' . get_the_title($page->ID) . '</a>';
+                $parent_id  = $page->post_parent;
+              }
+              $breadcrumbs = array_reverse($breadcrumbs);
+              for ($i = 0; $i < count($breadcrumbs); $i++) {
+                echo $breadcrumbs[$i];
+                if ($i != count($breadcrumbs)-1) echo ' ' . $delimiter . ' ';
+              }
+              if ($showCurrent == 1) echo ' ' . $delimiter . ' ' . $before . get_the_title() . $after;
+          
+            } elseif ( is_tag() ) {
+              echo $before . 'Posts tagged "' . single_tag_title('', false) . '"' . $after;
+          
+            } elseif ( is_author() ) {
+               global $author;
+              $userdata = get_userdata($author);
+              echo $before . 'Articles posted by ' . $userdata->display_name . $after;
+          
+            } elseif ( is_404() ) {
+              echo $before . 'Error 404' . $after;
+            }
+          
+            if ( get_query_var('paged') ) {
+              if ( is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author() ) echo ' (';
+              echo __('Page' , 'accesspress-basic') . ' ' . get_query_var('paged');
+              if ( is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author() ) echo ')';
+            }
+         
+            echo '</div></div>';
+         
+          }
     }
     add_action('aglee_pro_breadcrumb_section','aglee_pro_breadcrumb_section_cb');
     
@@ -1200,7 +1328,7 @@ add_action('aglee_pro_team_home_section','aglee_pro_team_section_home_cb');
         if(class_exists( 'WooCommerce' )) {
                 global $woocommerce;
                 ?>
-   	            <a class="home_cart" href="<?php echo $cart_url = $woocommerce->cart->get_cart_url(); ?>">
+                <a class="home_cart" href="<?php echo $cart_url = $woocommerce->cart->get_cart_url(); ?>">
                 <i class="fa fa-shopping-cart"></i>
                    <span class="home_cart_onhover">
                    <?php

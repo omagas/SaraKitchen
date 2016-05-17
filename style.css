@@ -4549,6 +4549,7 @@ STICKY MENU
 /*-------- new experience -------*/
 .feature_video_section {
   margin-top: 80px;
+  padding-top: 50px;
   /* background: #000; */
   background-image: url("http://www.sarasdiyhealth.com/test2/wp-content/uploads/2016/05/channel_bg.jpg");
 }
@@ -4678,8 +4679,10 @@ STICKY MENU
 }
 .team_post:before {
     content: "";
-    box-shadow: 0 0 500px #000 inset, 0 0 250px #000 inset, 0 0 200px #000 inset;
-    -webkit-box-shadow: 0 0 500px #000 inset, 0 0 250px #000 inset, 0 0 200px #000 inset;
+    /*box-shadow: 0 0 500px #000 inset, 0 0 250px #000 inset, 0 0 200px #000 inset;
+    -webkit-box-shadow: 0 0 500px #000 inset, 0 0 250px #000 inset, 0 0 200px #000 inset;*/
+    box-shadow: 0 0 0px #000 inset, 0 0 0px #000 inset, 0 0 200px #000 inset;
+    -webkit-box-shadow: 0 0 0px #000 inset, 0 0 0px #000 inset, 0 0 0px #000 inset;
     position: absolute;
     width: 447px;
     height: 100%;
@@ -6061,4 +6064,15 @@ SERVICE ICON LAYOUT
 .header-logo-container img {
     width: 300px;
 }
+
+#testimonial-container {
+    width: 80%;
+    margin-left: 10%;
+}
+
+/*最新書籍*/
+.team_post img {
+    border-radius: 10px;
+}
+
 
