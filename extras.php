@@ -376,9 +376,9 @@ add_action('aglee_pro_noslider', 'aglee_pro_nosliderdb');
     while ( have_posts() ) : the_post();
         //echo '<li>';
         $myvals = get_post_meta(get_the_ID(),'_ayvpp_video_url',true);
-        $my_title=get_the_title();//add 
-        $my_title=get_the_title();//add 
-        $my_content=get_the_content('Read more...');
+        $my_title=get_the_title();//hao add title
+        $my_content=get_the_content('Read more...');//hao add content
+        $permalink=get_the_permalink();//hao add content
         //echo '</li>';
 
     endwhile; 
@@ -397,7 +397,7 @@ add_action('aglee_pro_noslider', 'aglee_pro_nosliderdb');
                 <div class="feat_video_content wow fadeInRight" data-wow-delay="0.3s">
                     <h2><?php echo $my_title; ?></h2>
                     <p><?php echo $my_content; // get_the_content($feat_video_id_home); ?></p>
-                    <a href="<?php echo get_the_permalink($feat_video_id_home); ?>" class="readmore readmore_feat_video"><?php echo __('READ MORE','aglee-pro'); ?></a>
+                    <a href="<?php echo $permalink; ?>" class="readmore readmore_feat_video"><?php echo __('READ MORE','aglee-pro'); ?></a>
                      
                 </div>
             </div>
