@@ -1662,7 +1662,7 @@ Top Header CSS
 .aglee-search {
     /* background: rgba(0, 0, 0, 0.5); */
     line-height: 79px;
-    opacity: 0;
+    opacity: 1;
     overflow: hidden;
     padding: 0 8px 4px;
     /* position: absolute; */
@@ -1672,7 +1672,7 @@ Top Header CSS
     -webkit-transition: all 0.5s ease 0s;
     left: -20px;
     height: 79px;
-    z-index: -1;
+    z-index: 1;
 }
 .search-form > label {
     float: left;
@@ -6062,8 +6062,3 @@ SERVICE ICON LAYOUT
 }
 
 
-/*search*/
-search.search-active {
-    opacity: 1;
-    z-index: 9999;
-}
