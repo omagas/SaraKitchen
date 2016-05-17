@@ -1774,9 +1774,9 @@ Top Header CSS
 NAV CSS
 --------------------------------------------------------------*/
 
-/*.main-navigation-responsive {
+.main-navigation-responsive {
   display: none;
-}*/
+}
 
 .menu-toggle {
     display: none;
@@ -4549,14 +4549,15 @@ STICKY MENU
 /*-------- new experience -------*/
 .feature_video_section {
   margin-top: 80px;
-  background: #000;
+  /* background: #000; */
+  background-image: url("http://www.sarasdiyhealth.com/test2/wp-content/uploads/2016/05/channel_bg.jpg");
 }
 .feature_video_section .feat_video {
   float: left;
   width: 50%;
 }
 .feature_video_section .feat_video_content {
-  background-color: #000;
+  /* background-color: #000; */
   color: #fff;
   float: left;
   padding: 89px 0 90px 40px;
@@ -4581,7 +4582,7 @@ STICKY MENU
   width: 100% !important;
 }
 .mejs-container.svg.wp-video-shortcode.mejs-video{
-    height:544px !important;
+    height:344px !important;
 }
 .mejs-container, .mejs-embed, .mejs-embed body, .mejs-container .mejs-controls {
   background: #000 none repeat scroll 0 0 !important;
