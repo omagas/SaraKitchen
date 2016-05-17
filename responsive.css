@@ -4,6 +4,12 @@
 	}
 }
 @media screen and (max-width: 1280px){
+	/*hao*/
+	.menu.nav-menu {
+		display: block;
+		width: 100%;
+	}
+
 	.ap-container, .aglee-container, .ag-container{
 		width: 90%;
 	}
@@ -339,6 +345,7 @@
 		padding: 10px 0 0;
 	}
 	.menu.nav-menu {
+		display: none;
 		width: 100%;
 	}
 	.menu-toggle {
