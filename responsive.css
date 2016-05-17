@@ -365,7 +365,7 @@
 	}
 	.main-navigation .menu-menu-1-container {
 		background: #295074;
-		display: none;
+		/*display: none;*/
 		float: left;
 		left: 0;
 		max-height: 300px;
