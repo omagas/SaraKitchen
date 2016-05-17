@@ -376,7 +376,7 @@ add_action('aglee_pro_noslider', 'aglee_pro_nosliderdb');
     while ( have_posts() ) : the_post();
         //echo '<li>';
         $myvals = get_post_meta(get_the_ID(),'_ayvpp_video_url',true);
-        $my_title=get_the_title();
+        $my_title=get_the_title();//add 
         //echo '</li>';
 
     endwhile; 
