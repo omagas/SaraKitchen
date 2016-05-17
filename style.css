@@ -4557,7 +4557,7 @@ STICKY MENU
   width: 50%;
 }
 .feature_video_section .feat_video_content {
-  /* background-color: #000; */
+  /*background-color: #000;*/
   color: #fff;
   float: left;
   padding: 89px 0 90px 40px;
@@ -6061,5 +6061,4 @@ SERVICE ICON LAYOUT
 .header-logo-container img {
     width: 300px;
 }
-
 
