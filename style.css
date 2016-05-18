@@ -6075,4 +6075,54 @@ SERVICE ICON LAYOUT
     border-radius: 10px;
 }
 
+/*見證*/
+.feature-post-wrap figure.feature-post-thumbnail img {
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    top: 20px;
+    position: relative;
+    height: 250px;
+    width: 250px;
+    border-radius: 180px;
+    border: 6px solid #FFF;
+    box-shadow: 1px 1px 5px grey;
+}
 
+
+/*文章*/
+.team-container {
+    /* background-color: #000; */
+    background-image: url("http://www.sarasdiyhealth.com/test2/wp-content/uploads/2016/05/team_bg.jpg");
+    padding: 50px 0;
+    text-align: center;
+    color: #fff;
+}
+
+
+
+/*見證*/
+.home .footer-featured-section {
+    display: none;
+    background: #333;
+    padding: 50px 0;
+}
+
+/*選單*/
+.menu-sarasmenu-container {
+    float: right;
+}
+
+
+/*youtube節目*/
+.esg-media-cover-wrapper {
+
+    box-shadow: 1px 1px 5px grey;
+    border-radius: 10px;
+}
+
+/*youtube節目*/
+.esg-layout-masonry .esg-entry-media img {
+
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}

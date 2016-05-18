@@ -232,39 +232,45 @@ add_action('aglee_pro_noslider', 'aglee_pro_nosliderdb');
  function aglee_pro_featured_page_cb(){
 
 
-    $aglee_pro_feat_three=query_posts('showposts=3&orderby=time&category_name=article&paged=$page');
+    $aglee_pro_feat_three=query_posts('showposts=3&orderby=time&category_name=讀者心得見證&paged=$page');
     while ( have_posts() ) : the_post();
         //echo '<li>';
         
         $my_title1=get_the_title();//hao add title
         $my_content1=get_the_content('Read more...');//hao add content
         $permalink1=get_the_permalink();//hao add content
+        $src1 = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full', false );
+        $img_src1 = $src1[0];
         //echo '</li>';
 
     endwhile; 
 
     wp_reset_query();
 
-    $aglee_pro_feat_two=query_posts('showposts=2&orderby=time&category_name=article&paged=$page');
+    $aglee_pro_feat_two=query_posts('showposts=2&orderby=time&category_name=讀者心得見證&paged=$page');
     while ( have_posts() ) : the_post();
         //echo '<li>';
         
         $my_title2=get_the_title();//hao add title
         $my_content2=get_the_content('Read more...');//hao add content
         $permalink2=get_the_permalink();//hao add content
+        $src2 = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full', false );
+        $img_src2 = $src2[0];        
         //echo '</li>';
 
     endwhile; 
 
 
-    $aglee_pro_feat_one=query_posts('showposts=1&orderby=time&category_name=article&paged=$page');
+    $aglee_pro_feat_one=query_posts('showposts=1&orderby=time&category_name=讀者心得見證&paged=$page');
     while ( have_posts() ) : the_post();
         //echo '<li>';
         
         $my_title3=get_the_title();//hao add title
         $my_content3=get_the_content('Read more...');//hao add content
         $permalink3=get_the_permalink();//hao add content
-        //echo '</li>';
+        $src3 = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full', false );
+        $img_src3 = $src3[0];       
+        //echo '</li>;
 
     endwhile;    
 
@@ -280,17 +286,17 @@ add_action('aglee_pro_noslider', 'aglee_pro_nosliderdb');
                 <div class="feature-post-wrap wow fadeInLeft" data-wow-delay="0.25s" style="visibility: visible; animation-delay: 0.25s; animation-name: fadeInLeft;">
                     <figure class="feature-post-thumbnail">                
                         <a href="<?php echo $permalink1; ?>">
-                            <img src="http://www.sarasdiyhealth.com/test2/wp-content/uploads/2015/11/test_c.jpg" title="Home" alt="Home">
+                            <img src="<?php echo $img_src1; ?>" title="Home" alt="Home">
                         </a>
                         <figcaption> 
                             <a href="<?php echo $permalink1; ?>"><i class="fa fa-external-link"></i></a>
                         </figcaption>
                     </figure>
-                    <a href="<?php echo $permalink1; ?>">
+                    <!--a href="<?php echo $permalink1; ?>">
                         <h2><?php echo $my_title1; ?></h2>
-                    </a>
+                    </a-->
                     <div class="feature-post-excerpt">
-                        <?php echo $my_content1; ?>               
+                        <i class="fa fa-quote-left" aria-hidden="true"></i><?php echo wp_trim_words($my_content1,50); ?><i class="fa fa-quote-right" aria-hidden="true"></i>               
                     </div>
                     <a class="feat_readmore-button readmore-button" href="<?php echo $permalink1; ?>">
                         Read More                
@@ -300,17 +306,17 @@ add_action('aglee_pro_noslider', 'aglee_pro_nosliderdb');
                 <div class="feature-post-wrap wow fadeInLeft" data-wow-delay="0.75s" style="visibility: visible; animation-delay: 0.75s; animation-name: fadeInLeft;">
                     <figure class="feature-post-thumbnail">                
                         <a href="<?php echo $permalink2; ?>">
-                            <img src="http://www.sarasdiyhealth.com/test2/wp-content/uploads/2015/11/test_c.jpg" title="Home" alt="Home">
+                            <img src="<?php echo $img_src2; ?>" title="Home" alt="Home">
                         </a>
                         <figcaption> 
                             <a href="<?php echo $permalink2; ?>"><i class="fa fa-external-link"></i></a>
                         </figcaption>
                     </figure>
-                    <a href="<?php echo $permalink2; ?>">
+                    <!--a href="<?php echo $permalink2; ?>">
                         <h2><?php echo $my_title2; ?></h2>
-                    </a>
+                    </a-->
                     <div class="feature-post-excerpt">
-                        <?php echo $my_content2; ?>                 
+                        <i class="fa fa-quote-left" aria-hidden="true"></i><?php echo wp_trim_words($my_content2,50); ?><i class="fa fa-quote-right" aria-hidden="true"></i>                 
                     </div>
                     <a class="feat_readmore-button readmore-button" href="<?php echo $permalink2; ?>">
                         Read More                
@@ -321,17 +327,18 @@ add_action('aglee_pro_noslider', 'aglee_pro_nosliderdb');
                 <div class="feature-post-wrap wow fadeInLeft" data-wow-delay="1.25s" style="visibility: visible; animation-delay: 1.25s; animation-name: fadeInLeft;">
                     <figure class="feature-post-thumbnail">                
                         <a href="<?php echo $permalink3; ?>">
-                            <img src="http://www.sarasdiyhealth.com/test2/wp-content/uploads/2015/11/test_c.jpg" title="Home" alt="Home">
+                            <img src="<?php echo $img_src3; ?>" title="Home" alt="Home">
                         </a>
                         <figcaption> 
                             <a href="<?php echo $permalink3; ?>"><i class="fa fa-external-link"></i></a>
                         </figcaption>
                     </figure>
-                    <a href="<?php echo $permalink3; ?>">
+                    <!--a href="<?php echo $permalink3; ?>">
                         <h2><?php echo $my_title3; ?></h2>
-                    </a>
+                    </a-->
                     <div class="feature-post-excerpt">
-                        <?php echo $my_content3; ?>                 
+                        <i class="fa fa-quote-left" aria-hidden="true"></i><?php echo wp_trim_words($my_content3,50); ?><i class="fa fa-quote-right" aria-hidden="true"></i>     
+                                    
                     </div>
                     <a class="feat_readmore-button readmore-button" href="<?php echo $permalink3; ?>">
                     Read More                

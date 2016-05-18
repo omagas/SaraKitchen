@@ -591,6 +591,7 @@ function aglee_pro_team_section_home_cb(){
         $my_title1=get_the_title();//hao add title
         $my_content1=get_the_content('Read more...');//hao add content
         $permalink1=get_the_permalink();//hao add content
+        
         //echo '</li>';
 
     endwhile; 
@@ -642,7 +643,7 @@ function aglee_pro_team_section_home_cb(){
                         $img_one = wp_get_attachment_image_src(get_post_thumbnail_id($team_post_1),'team-home-img', true);
                         $team_name_one = get_post_meta( $team_post_1, 'ag_team_designation', true );
                         $team_designation_one = get_the_title($team_post_1);
-                        $team_short_desc_one = wp_trim_words(get_post_field('post_content', $team_post_1),20);
+                        $team_short_desc_one = wp_trim_words($my_content1,20);
                      ?>
                     <a href="<?php echo $permalink1; ?>">
                         <div class="team_post">
@@ -651,7 +652,7 @@ function aglee_pro_team_section_home_cb(){
                                 <div class="team_title_home"><?php echo $my_title1; ?></div>
                                
                             </div>
-                            <div class="team_short_content_home"><?php echo $my_content1; ?></div>
+                            <div class="team_short_content_home"><?php echo $team_short_desc_one; ?></div>
                         </div>
                     </a>
                 </div>
@@ -665,7 +666,7 @@ function aglee_pro_team_section_home_cb(){
                         $img_two = wp_get_attachment_image_src(get_post_thumbnail_id($team_post_2),'team-home-img', true);
                         $team_name_two = get_post_meta( $team_post_2, 'ag_team_designation', true );
                         $team_designation_two = get_the_title($team_post_2);
-                        $team_short_desc_two = wp_trim_words(get_post_field('post_content', $team_post_2),20);
+                        $team_short_desc_two = wp_trim_words($my_content2,20);
                      ?>
                     <a href="<?php echo $permalink2; ?>"> 
                         <div class="team_post">
@@ -674,7 +675,7 @@ function aglee_pro_team_section_home_cb(){
                                 <div class="team_title_home"><?php echo $my_title2; ?></div>
                                 
                             </div>
-                            <div class="team_short_content_home"><?php echo $my_content2; ?></div>
+                            <div class="team_short_content_home"><?php echo $team_short_desc_two; ?></div>
                         </div>
                     </a>
                 </div>
@@ -688,7 +689,7 @@ function aglee_pro_team_section_home_cb(){
                         $img_three = wp_get_attachment_image_src(get_post_thumbnail_id($team_post_3),'team-home-img', true);
                         $team_name_three = get_post_meta( $team_post_3, 'ag_team_designation', true );
                         $team_designation_three = get_the_title($team_post_3);
-                        $team_short_desc_three = wp_trim_words(get_post_field('post_content', $team_post_3),20);
+                        $team_short_desc_three = wp_trim_words($my_content3,20);
                      ?>
                      <a href="<?php echo $permalink3; ?>">
                         <div class="team_post">
@@ -697,7 +698,7 @@ function aglee_pro_team_section_home_cb(){
                                 <div class="team_title_home"><?php echo $my_title3; ?></div>
                                 
                             </div>
-                            <div class="team_short_content_home"><?php echo $my_content3; ?></div>
+                            <div class="team_short_content_home"><?php echo $team_short_desc_three; ?></div>
                         </div>
                      </a>
                 </div>
