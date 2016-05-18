@@ -225,13 +225,11 @@ add_action('aglee_pro_noslider', 'aglee_pro_nosliderdb');
 
 /** end no slider **/
 
+
+
+
 /** Feature page section (Home) **/
  function aglee_pro_featured_page_cb(){
-        $aglee_pro_feature_section_show = get_theme_mod('homepage_feature_section','0');
-        if($aglee_pro_feature_section_show == '1'){
-        $aglee_pro_feat_title_home = get_theme_mod('feature_page_heading_part', 'START YOUR WORK WITH ADVANCED AGLEE PRO');
-
-        $aglee_pro_readmoretext = get_theme_mod('home_page_translation','Read More');
 
 
     $aglee_pro_feat_three=query_posts('showposts=3&orderby=time&category_name=article&paged=$page');
@@ -272,13 +270,92 @@ add_action('aglee_pro_noslider', 'aglee_pro_nosliderdb');
 
     wp_reset_query();
 
+?>   
+
+<div id="featured-post-container" class="clearfix">
+     <div class="aglee-container clearfix">
+            <span class="features_title wow fadeInUp" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;"> 讀者見證</span>
+            <div class="feature-post-wrap-block clearfix">
+                
+                <div class="feature-post-wrap wow fadeInLeft" data-wow-delay="0.25s" style="visibility: visible; animation-delay: 0.25s; animation-name: fadeInLeft;">
+                    <figure class="feature-post-thumbnail">                
+                        <a href="<?php echo $permalink1; ?>">
+                            <img src="http://www.sarasdiyhealth.com/test2/wp-content/uploads/2015/11/test_c.jpg" title="Home" alt="Home">
+                        </a>
+                        <figcaption> 
+                            <a href="<?php echo $permalink1; ?>"><i class="fa fa-external-link"></i></a>
+                        </figcaption>
+                    </figure>
+                    <a href="<?php echo $permalink1; ?>">
+                        <h2><?php echo $my_title1; ?></h2>
+                    </a>
+                    <div class="feature-post-excerpt">
+                        <?php echo $my_content1; ?>               
+                    </div>
+                    <a class="feat_readmore-button readmore-button" href="<?php echo $permalink1; ?>">
+                        Read More                
+                    </a>
+                </div>
+
+                <div class="feature-post-wrap wow fadeInLeft" data-wow-delay="0.75s" style="visibility: visible; animation-delay: 0.75s; animation-name: fadeInLeft;">
+                    <figure class="feature-post-thumbnail">                
+                        <a href="<?php echo $permalink2; ?>">
+                            <img src="http://www.sarasdiyhealth.com/test2/wp-content/uploads/2015/11/test_c.jpg" title="Home" alt="Home">
+                        </a>
+                        <figcaption> 
+                            <a href="<?php echo $permalink2; ?>"><i class="fa fa-external-link"></i></a>
+                        </figcaption>
+                    </figure>
+                    <a href="<?php echo $permalink2; ?>">
+                        <h2><?php echo $my_title2; ?></h2>
+                    </a>
+                    <div class="feature-post-excerpt">
+                        <?php echo $my_content2; ?>                 
+                    </div>
+                    <a class="feat_readmore-button readmore-button" href="<?php echo $permalink2; ?>">
+                        Read More                
+                    </a>
+                </div>
 
 
-        // $aglee_pro_feat_one = get_theme_mod('feature_post_one','0');
-        // $aglee_pro_feat_two = get_theme_mod('feature_post_two','0');
-        // $aglee_pro_feat_three = get_theme_mod('feature_post_three','0');
+                <div class="feature-post-wrap wow fadeInLeft" data-wow-delay="1.25s" style="visibility: visible; animation-delay: 1.25s; animation-name: fadeInLeft;">
+                    <figure class="feature-post-thumbnail">                
+                        <a href="<?php echo $permalink3; ?>">
+                            <img src="http://www.sarasdiyhealth.com/test2/wp-content/uploads/2015/11/test_c.jpg" title="Home" alt="Home">
+                        </a>
+                        <figcaption> 
+                            <a href="<?php echo $permalink3; ?>"><i class="fa fa-external-link"></i></a>
+                        </figcaption>
+                    </figure>
+                    <a href="<?php echo $permalink3; ?>">
+                        <h2><?php echo $my_title3; ?></h2>
+                    </a>
+                    <div class="feature-post-excerpt">
+                        <?php echo $my_content3; ?>                 
+                    </div>
+                    <a class="feat_readmore-button readmore-button" href="<?php echo $permalink3; ?>">
+                    Read More                
+                </a>
+                </div>
+                            
+                <div class="clearfix"></div>
+            </div>
+     </div>
+</div>
+<?php
+
+}        
 
 
+/*
+ function aglee_pro_featured_page_cb(){
+        $aglee_pro_feature_section_show = get_theme_mod('homepage_feature_section','0');
+        if($aglee_pro_feature_section_show == '1'){
+        $aglee_pro_feat_title_home = get_theme_mod('feature_page_heading_part', 'START YOUR WORK WITH ADVANCED AGLEE PRO');
+        $aglee_pro_readmoretext = get_theme_mod('home_page_translation','Read More');
+        $aglee_pro_feat_one = get_theme_mod('feature_post_one','0');
+        $aglee_pro_feat_two = get_theme_mod('feature_post_two','0');
+        $aglee_pro_feat_three = get_theme_mod('feature_post_three','0');
         $aglee_feat_array_source = array($aglee_pro_feat_one,$aglee_pro_feat_two,$aglee_pro_feat_three);
         $aglee_feat_array_diff = array(0,0,0);  
         $aglee_feat_actual = array_diff($aglee_feat_array_source,$aglee_feat_array_diff);
@@ -315,7 +392,7 @@ add_action('aglee_pro_noslider', 'aglee_pro_nosliderdb');
                     <?php echo wp_trim_words(get_post_field('post_content', $feat_row),35,'...');//wp_trim_words(get_the_content($feat_row),35,'...'); ?>
                 </div>
                 <a class="feat_readmore-button readmore-button" href="<?php echo get_the_permalink($feat_row); ?>">
-                    <?php echo esc_attr($aglee_pro_readmoretext); ?>HHHHH
+                    <?php echo esc_attr($aglee_pro_readmoretext); ?>
                 </a>
             </div>
             <?php if($count%3 == 0) : ?>
@@ -331,6 +408,7 @@ add_action('aglee_pro_noslider', 'aglee_pro_nosliderdb');
     <?php }
     } // end of condition check for enable feature section
      }
+*/
  add_action('aglee_pro_home_featured_page_customizer_section', 'aglee_pro_featured_page_cb');
  
  /** Aglee pro testimonial slider **/
@@ -591,6 +669,7 @@ function aglee_pro_team_section_home_cb(){
         $my_title1=get_the_title();//hao add title
         $my_content1=get_the_content('Read more...');//hao add content
         $permalink1=get_the_permalink();//hao add content
+        $gpthumb1=get_post_thumbnail_id();
         //echo '</li>';
 
     endwhile; 
@@ -604,6 +683,7 @@ function aglee_pro_team_section_home_cb(){
         $my_title2=get_the_title();//hao add title
         $my_content2=get_the_content('Read more...');//hao add content
         $permalink2=get_the_permalink();//hao add content
+        $gpthumb2=get_post_thumbnail_id();
         //echo '</li>';
 
     endwhile; 
@@ -616,6 +696,7 @@ function aglee_pro_team_section_home_cb(){
         $my_title3=get_the_title();//hao add title
         $my_content3=get_the_content('Read more...');//hao add content
         $permalink3=get_the_permalink();//hao add content
+        $gpthumb3=get_post_thumbnail_id();
         //echo '</li>';
 
     endwhile;    
@@ -639,7 +720,7 @@ function aglee_pro_team_section_home_cb(){
             ?>
                 <div class="team-wrapper-block clearfix wow fadeInUp"  data-wow-duration="1s">
                     <?php 
-                        $img_one = wp_get_attachment_image_src(get_post_thumbnail_id($team_post_1),'team-home-img', true);
+                        $img_one = wp_get_attachment_image_src($gpthumb1,'team-home-img', true);
                         $team_name_one = get_post_meta( $team_post_1, 'ag_team_designation', true );
                         $team_designation_one = get_the_title($team_post_1);
                         $team_short_desc_one = wp_trim_words(get_post_field('post_content', $team_post_1),20);
@@ -662,7 +743,7 @@ function aglee_pro_team_section_home_cb(){
                 ?>
                 <div class="team-wrapper-block clearfix wow fadeInUp"  data-wow-duration="1s">
                     <?php
-                        $img_two = wp_get_attachment_image_src(get_post_thumbnail_id($team_post_2),'team-home-img', true);
+                        $img_two = wp_get_attachment_image_src($gpthumb2,'team-home-img', true);
                         $team_name_two = get_post_meta( $team_post_2, 'ag_team_designation', true );
                         $team_designation_two = get_the_title($team_post_2);
                         $team_short_desc_two = wp_trim_words(get_post_field('post_content', $team_post_2),20);
@@ -685,7 +766,7 @@ function aglee_pro_team_section_home_cb(){
                 ?>
                 <div class="team-wrapper-block clearfix clearfix wow fadeInUp"  data-wow-duration="1.5s">
                     <?php
-                        $img_three = wp_get_attachment_image_src(get_post_thumbnail_id($team_post_3),'team-home-img', true);
+                        $img_three = wp_get_attachment_image_src($gpthumb1,'team-home-img', true);
                         $team_name_three = get_post_meta( $team_post_3, 'ag_team_designation', true );
                         $team_designation_three = get_the_title($team_post_3);
                         $team_short_desc_three = wp_trim_words(get_post_field('post_content', $team_post_3),20);
