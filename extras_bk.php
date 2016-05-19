@@ -1420,7 +1420,10 @@ add_action('aglee_pro_team_home_section','aglee_pro_team_section_home_cb');
         }
         
         ?>
-        <div id="page-header-banner" class="page-banners" style="background: <?php echo $aglee_pro_header_bk_color; ?> url(<?php echo $aglee_pro_header_bk_image; ?>) no-repeat center top;">
+        <!--div id="page-header-banner" class="page-banners" style="background: <?php echo $aglee_pro_header_bk_color; ?> url(<?php echo $aglee_pro_header_bk_image; ?>) no-repeat center top;"-->
+        <div id="page-header-banner" class="page-banners" style="background:url(http://www.sarasdiyhealth.com/test2/wp-content/uploads/2016/05/page-banner.jpg) no-repeat center top;">
+
+            
             <div class="ag-container">
                 <h1 class="entry-title" style="">
                     <?php 
