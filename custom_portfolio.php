@@ -28,12 +28,23 @@ get_header();
 
 
 					<?
-					$page = (get_query_var('paged')) ? get_query_var('paged') : 1;
-					query_posts('showposts=10&orderby=time&category_name=article&paged=$page'); 
-					if ( have_posts() ) : while ( have_posts() ) : the_post();
+					//$page = (get_query_var('paged')) ? get_query_var('paged') : 1;
+					//$the_query=query_posts('posts_per_page=3&orderby=time&category_name=article&paged=$page'); 
 
 
-					?>                    	
+					  // set up or arguments for our custom query
+					  $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
+					  $query_args = array(
+					    'post_type' => 'post',
+					    'posts_per_page' => 5,
+					    'paged' => $paged
+					  );
+					  // create a new instance of WP_Query
+					  $the_query = new WP_Query( $query_args );
+
+					?>      
+					<?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); // run the loop ?>
+               	
                             <div class="portfolios clearfix port-cat-18" style="position: absolute; left: 0px; top: 0px;">
                                             <div class="portfolios-inner">
                                                 <div class="protfolio-inner-border">
@@ -47,8 +58,31 @@ get_header();
                                                 <a href="<?php the_permalink();?>">Read More</a>
                                             </div>
                             </div><!-- end of protfolios -->
-					<? endwhile; endif;?> 
+					<? endwhile; ?>
+					
+					<?php if ($the_query->max_num_pages > 1) { // check if the max number of pages is greater than 1  ?>
+							  <div class="nav">
+							  <nav class="prev-next-posts">
+							    <div class="prev-posts-link">
+							      <?php echo get_next_posts_link( 'Older Entries', $the_query->max_num_pages ); // display older posts link ?>
+							    </div>
+							    <div class="next-posts-link">
+							      <?php echo get_previous_posts_link( 'Newer Entries' ); // display newer posts link ?>
+							    </div>
+							  </nav>
+							</div>
+					<?php } ?>
+
+					<?php else: ?>
+							  <article>
+							    <h1>Sorry...</h1>
+							    <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+							  </article>
+					<?php endif; ?>	
+
+
 					</div>
+
             	</div><!-- .entry-content -->
             
             </article><!-- #post-## -->				            

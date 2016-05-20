@@ -5760,7 +5760,7 @@ article.custom-testimonial .entry-content {
 }
 .portfolio_list .protfolio-inner-border{
     float:left;
-    width:30%;
+    width:20%;
     margin-right: 30px;
 }
 .portfolio_list .protfolio-inner-border::before, .portfolio_list .protfolio-inner-border::after,
@@ -5778,7 +5778,7 @@ article.custom-testimonial .entry-content {
 }
 .portfolio_list .portfolio_onhover_text{
     float: right;
-    width: 64%;
+    width: 70%;
     font-weight: 400;
     font-size: 16px;
     color: #777;
@@ -6130,7 +6130,7 @@ SERVICE ICON LAYOUT
     float: left;
     margin-right: 60px;
     margin-left: 60px;
-    width: 30%;
+/*    width: 30%;*/
     color: #fff;
 }
 
@@ -6163,4 +6163,12 @@ i.fa.fa-circle {
 .portfolio_list h2 {
     color: #333;
     border-bottom: 2px solid #ddd;
+    margin-bottom: 0px;
 }
+
+
+.portfolio_list .portfolios {
+    width: 80%;
+    margin: 0 0 40px 10%;
+}
+
