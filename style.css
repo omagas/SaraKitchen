@@ -6113,16 +6113,54 @@ SERVICE ICON LAYOUT
 }
 
 
-/*youtube節目*/
 .esg-media-cover-wrapper {
 
     box-shadow: 1px 1px 5px grey;
     border-radius: 10px;
 }
 
-/*youtube節目*/
 .esg-layout-masonry .esg-entry-media img {
 
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+}
+
+/*footer hao*/
+.featured-footer {
+    float: left;
+    margin-right: 60px;
+    margin-left: 60px;
+    width: 30%;
+    color: #fff;
+}
+
+
+.footer-featured-section .feat-page_readmore_btn {
+    color: white;
+    border-color: black;
+    background: black;
+    line-height: 20px;
+}
+
+i.fa.fa-circle {
+    color: #5A40A0;
+    padding-right: 10px;
+}
+
+
+.featured-footer-wrap .widget-title {
+    text-align: center;
+    border-bottom: 10px solid #5A40A0;
+}
+
+/*文章*/
+.portfolios .portfolios-inner img {
+
+    width: 200px;
+}
+
+
+.portfolio_list h2 {
+    color: #333;
+    border-bottom: 2px solid #ddd;
 }

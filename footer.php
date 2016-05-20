@@ -16,23 +16,44 @@
                     <div class="featured-footer-wrap">
                         <?php if(is_active_sidebar('aglee_footer_one')) : ?>
                             <div class="featured-footer-1 featured-footer wow fadeInUp" data-wow-delay="0.2s">
-                                <?php dynamic_sidebar('aglee_footer_one'); ?>
+                                <?php dynamic_sidebar('aglee_footer_one'); ?>                              
                             </div>
                         <?php endif; ?>
-                        <?php if(is_active_sidebar('aglee_footer_two')) : ?>
+                        <?php //if(is_active_sidebar('aglee_footer_two')) : ?>
                             <div class="feaatured-footer-2 featured-footer wow fadeInUp" data-wow-delay="0.4s">
-                                <?php dynamic_sidebar('aglee_footer_two'); ?>
+                                <?php //dynamic_sidebar('aglee_footer_two'); ?>
+
+                                <aside id="recent-posts-3" class="widget widget_recent_entries">        
+                                        <h3 class="widget-title"><span>減肥班資訊</span></h3>     
+                                <ul>
+                                <?
+                                //$page = (get_query_var('paged')) ? get_query_var('paged') : 1;
+                                query_posts('showposts=4&orderby=time&category_name=減肥班資訊&paged=$page'); 
+                                if ( have_posts() ) : while ( have_posts() ) : the_post();
+                                ?>        
+                                        <li>
+                                            <i class="fa fa-circle" aria-hidden="true"></i>
+                                            <a href="<?php the_permalink();?>"><? the_title() ?></a>
+                                            <span class="post-date"><?php echo get_the_date('M j,Y');?></span>
+                                            <a class="button feat-page_readmore_btn" href="<?php the_permalink();?>">
+                                            Read More
+                                            </a>
+                                        </li>
+                                <? endwhile; endif;?>     
+
+                                </ul>
+                                </aside>                                  
                             </div>
-                        <?php endif; ?>
+                        <?php //endif; ?>
                         <?php if(is_active_sidebar('aglee_footer_three')) : ?>
                             <div class="featured-footer-3 featured-footer wow fadeInUp" data-wow-delay="0.6s">
                                 <?php dynamic_sidebar('aglee_footer_three'); ?>
                             </div>
                         <?php endif; ?>
                         <?php if(is_active_sidebar('aglee_footer_four')) : ?>
-                            <div class="featured-footer-4 featured-footer wow fadeInUp" data-wow-delay="0.8s">
+                            <!--div class="featured-footer-4 featured-footer wow fadeInUp" data-wow-delay="0.8s">
                                 <?php dynamic_sidebar('aglee_footer_four'); ?>
-                            </div>
+                            </div-->
                         <?php endif; ?>
                     </div>
                 </div>
