@@ -186,6 +186,12 @@
 	.team_post::before {
 		width: 310px;
 	}
+
+	.header-logo-container {
+	    position: static;
+	}
+
+
 }
 
 @media screen and (max-width: 980px){

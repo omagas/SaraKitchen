@@ -1681,10 +1681,10 @@ Top Header CSS
 .aglee-search form input[type='search'] {
     /* height: 50px; */
     margin-top: 25px;
-    font-size: 18px;
+    font-size: 15px;
     /* border: none; */
     float: right;
-    border-radius: 10px;
+    /*border-radius: 10px;*/
 }
 .aglee-search .search-form > input[type='submit']{
     background: #5a40a0 none repeat scroll 0 0;
@@ -6066,7 +6066,7 @@ SERVICE ICON LAYOUT
 }
 
 #testimonial-container {
-    width: 80%;
+    width: 86%;
     margin-left: 10%;
 }
 
@@ -6171,4 +6171,71 @@ i.fa.fa-circle {
     width: 80%;
     margin: 0 0 40px 10%;
 }
+
+
+/*hao Ｓearch bar*/
+.aglee-search .search-form > input[type='submit'] {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/*hao Ｓearch buttom*/
+.aglee-search form input[type='search'] {
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+
+/*首頁見證 hover*/
+.feature-post-wrap figure.feature-post-thumbnail:hover img {
+    top: -5px;
+}
+
+
+.feature-post-wrap figure.feature-post-thumbnail img {
+    top: -5px;
+}
+
+
+#featured-post-container .features_title {
+    color: #5A40A0;
+}
+
+.team-container h2 {
+    font-size: 2.5vw;
+    color: #5A40A0;
+}
+
+
+.home .team-container {
+    text-align: -webkit-center;
+}
+
+
+.team_post {
+    width: 290px;
+}
+
+@media screen and (max-width: 640px)
+.team-wrapper-block {
+    display: block;
+    width: 50%;
+}
+
+
+.header-logo-container {
+    position: absolute;
+    height: 170px;
+    top: 10px;
+}
+
+.header-logo-container img {
+    width: 500px;
+}
+
+/*hao logo*/
+.top-header {
+    background-color: white !important;
+}
+
 
