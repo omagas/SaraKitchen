@@ -3675,7 +3675,7 @@ Footer CSS
 .widget_nav_menu .menu li a {
     color: #3d3d3d;
     font-size: 14px;
-    line-height: 32px;
+    line-height: 40px;
     position: relative;
     padding-left: 0px;
 }
@@ -6268,9 +6268,15 @@ i.fa.fa-circle {
     width: 30%;
 }
 
+/*首頁youtube專區*/
 .feature_video_section .feat_video_content {
     padding: 50px 0 50px 100px;
 
+}
+
+.feature_video_section .feat_video {
+    padding-left: 3%;
+    padding-right: 3%;
 }
 
 
@@ -6293,12 +6299,152 @@ i.fa.fa-quote-right {
     margin-bottom: 5px;
 }
 
+.widget_nav_menu .menu li a {
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+i.fa.fa-circle {
+    color: #5A40A0;
+    padding-right: 10px;
+    font-size: 15px;
+}
+
 
 
 
 /*hao end*/
 
 
+/*reyes*/
+    @media screen and (min-device-width: 769px) {
+      .about-header {
+        text-align: center;
+        border-bottom: 5px solid #5C40A6;
+        margin-bottom: 30px;
+      }
 
+      .about-header p {
+        font-size: 2em;
+        margin-bottom: 0.5em;
+        color: #5C40A6;
+      }
+
+      .about-container {
+        background: url('http://www.sarasdiyhealth.com/test2/wp-content/uploads/2016/05/abus_background.png');
+        background-size: 100% auto;
+        max-width: 1024px;
+        height: 100%;
+        margin: 0 auto;
+      }
+      .about-container > div:nth-child(n+2) {
+        width: 100%;
+        height: 50%;
+        position: relative;
+      }
+
+      .about-container .about-top img {
+        max-width: 50%;
+        max-height: 100%;
+        float: left;
+      }
+
+      .about-container .about-top div {
+        width: 50%;
+        padding-left: 20px;
+        float: left;
+        box-sizing: border-box;
+      }
+
+      .about-container .about-bottom div {
+        width: 50%;
+        clear: both;
+      }
+
+      .about-container .about-bottom img {
+        position: absolute;
+        top: 30%;
+        right: 5%;
+        max-width: 50%;
+        max-height: 120%;
+      }
+      .about-container .about-bottom p:nth-child(1) {
+        margin-top: 20px;
+      }
+      .about-container p {
+        color: #666;
+        line-height: 1.8em;
+        letter-spacing: 0.2em;
+      }
+
+      .desktop-show {
+        display: block;
+      }
+
+      .mobile-show {
+        display: none;
+      }
+
+    }
+
+    @media screen and (max-device-width: 768px) {
+      .about-container p {
+        color: #666;
+        /*line-height: 1.8em;*/
+        letter-spacing: 0.2em;
+        padding: 0 3em;
+        font-size: 1.6em;
+      }
+
+      .about-container .about-top img {
+        margin: 0 auto;
+          display: block;
+      }
+
+      .about-container .about-bottom img {
+        margin: 0 auto;
+      }
+
+      .about-header {
+        text-align: center;
+        border-bottom: 5px solid #5C40A6;
+        margin-bottom: 30px;
+      }
+
+      .about-header p {
+        font-size: 3em;
+        margin-bottom: 0.5em;
+        color: #5C40A6;
+      }
+
+      .desktop-show {
+        display: none;
+      }
+
+      .mobile-show {
+        display: block;
+      }
+    }
+
+@media screen and (min-device-width: 1000px){
+.about-container .about-bottom img {
+    position: absolute;
+    top: 30%;
+    right: 5%;
+
+    }
+}
+
+@media screen and (min-width: 400px) and (max-width: 700px){
+.about-container .about-bottom img {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+
+    }
+}
+
+
+/*reyes end*/
 
 

@@ -89,9 +89,7 @@
 
 
                             </div>
-                             <div class="featured-footer-1 featured-footer wow fadeInUp" data-wow-delay="0.2s">
-                                <?php dynamic_sidebar('aglee_footer_one'); ?>                              
-                            </div>                           
+                        
                         <?php endif; ?>
                         
 

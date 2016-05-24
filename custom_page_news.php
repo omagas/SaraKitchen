@@ -12,7 +12,7 @@ get_header();
 <?php echo do_shortcode('[mdf_search_form id="308"]'); ?>
 <?
 $page = (get_query_var('paged')) ? get_query_var('paged') : 1;
-query_posts('posts_per_page=3&orderby=time&category_name=article&paged=$page'); 
+query_posts('showposts=10&orderby=time&category_name=article&paged=$page'); 
 if ( have_posts() ) : while ( have_posts() ) : the_post();
 ?>
 
