@@ -289,14 +289,17 @@ add_action('aglee_pro_noslider', 'aglee_pro_nosliderdb');
                             <img src="<?php echo $img_src1; ?>" title="Home" alt="Home">
                         </a>
                         <figcaption> 
-                            <a href="<?php echo $permalink1; ?>"><i class="fa fa-external-link"></i></a>
+                            <a href="<?php echo $permalink1; ?>"><i class="fa fa-external-link "></i></a>
                         </figcaption>
                     </figure>
                     <!--a href="<?php echo $permalink1; ?>">
                         <h2><?php echo $my_title1; ?></h2>
                     </a-->
                     <div class="feature-post-excerpt">
-                        <i class="fa fa-quote-left" aria-hidden="true"></i><?php echo wp_trim_words($my_content1,50); ?><i class="fa fa-quote-right" aria-hidden="true"></i>               
+                        <i class="fa fa-quote-left fa-4" aria-hidden="true"></i>
+                        <br>
+                        <p><?php echo wp_trim_words($my_content1,50); ?></p>
+                        <i class="fa fa-quote-right fa-4" aria-hidden="true"></i>               
                     </div>
                     <a class="feat_readmore-button readmore-button" href="<?php echo $permalink1; ?>">
                         Read More                
@@ -316,7 +319,10 @@ add_action('aglee_pro_noslider', 'aglee_pro_nosliderdb');
                         <h2><?php echo $my_title2; ?></h2>
                     </a-->
                     <div class="feature-post-excerpt">
-                        <i class="fa fa-quote-left" aria-hidden="true"></i><?php echo wp_trim_words($my_content2,50); ?><i class="fa fa-quote-right" aria-hidden="true"></i>                 
+                        <i class="fa fa-quote-left fa-4" aria-hidden="true"></i>
+                        <br>
+                        <p><?php echo wp_trim_words($my_content1,50); ?></p>
+                        <i class="fa fa-quote-right fa-4" aria-hidden="true"></i>               
                     </div>
                     <a class="feat_readmore-button readmore-button" href="<?php echo $permalink2; ?>">
                         Read More                
@@ -337,8 +343,10 @@ add_action('aglee_pro_noslider', 'aglee_pro_nosliderdb');
                         <h2><?php echo $my_title3; ?></h2>
                     </a-->
                     <div class="feature-post-excerpt">
-                        <i class="fa fa-quote-left" aria-hidden="true"></i><?php echo wp_trim_words($my_content3,50); ?><i class="fa fa-quote-right" aria-hidden="true"></i>     
-                                    
+                        <i class="fa fa-quote-left fa-4" aria-hidden="true"></i>
+                        <br>
+                        <p><?php echo wp_trim_words($my_content1,50); ?></p>
+                        <i class="fa fa-quote-right fa-4" aria-hidden="true"></i>               
                     </div>
                     <a class="feat_readmore-button readmore-button" href="<?php echo $permalink3; ?>">
                     Read More                
@@ -522,30 +530,64 @@ add_action('aglee_pro_noslider', 'aglee_pro_nosliderdb');
                 $video_feat = get_post_meta( $feat_video_id_home, 'ag_featured_video_id', true );
                 ?>
                 <div class="feat_video">
-                    <?php echo do_shortcode('[video width="300" height="200" src="'.$myvals.'" ][/video]');  ?>
+                    <?php echo do_shortcode('[video  src="'.$myvals.'" ][/video]');  ?>
                     <div class="video_primary_content">
                       <h2><?php echo $my_title; ?></h2>  
                       <p><?php echo $my_content; ?></p>
                     </div>
                 </div>
+
+<?php
+    query_posts('showposts=2&orderby=time&category_name=youtube&paged=$page');
+    while ( have_posts() ) : the_post();
+        //echo '<li>';
+        
+        $my_youtube_title2=get_the_title();//hao add title
+        $my_youtube_content2=get_the_content('Read more...');//hao add content
+        $youtube_permalink2=get_the_permalink();//hao add content
+        $youtube_src2 = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full', false );
+        $youtube_img_src2 = $youtube_src2[0];
+        //echo '</li>';
+
+    endwhile; 
+?>
                 <div class="feat_video_content wow fadeInRight" data-wow-delay="0.3s">
                     <div class="video_thrid_thmbnail">
-                            <a href="http://www.sarasdiyhealth.com/test2/article/article4/"><img width="112" height="112" src="http://www.sarasdiyhealth.com/test2/wp-content/uploads/2015/11/cropped-favicon.png" class="attachment-article-post-thumbnail size-article-post-thumbnail wp-post-image" alt="cropped-favicon.png" srcset="http://www.sarasdiyhealth.com/test2/wp-content/uploads/2015/11/cropped-favicon.png 512w, http://www.sarasdiyhealth.com/test2/wp-content/uploads/2015/11/cropped-favicon-150x150.png 150w, http://www.sarasdiyhealth.com/test2/wp-content/uploads/2015/11/cropped-favicon-300x300.png 300w, http://www.sarasdiyhealth.com/test2/wp-content/uploads/2015/11/cropped-favicon-310x310.png 310w" sizes="(max-width: 512px) 100vw, 512px"></a>
+                            <a href="<?php echo $youtube_permalink2; ?>"><img   src="<?php echo $youtube_img_src2; ?>"></a>
                     </div>
                     <div class="video_thrid_content">
-                        <h2><?php echo $my_title; ?></h2>
-                        <p><?php echo $my_content; // get_the_content($feat_video_id_home); ?></p> 
+                        <h2><?php echo $my_youtube_title2;?></h2>
+                        <p><?php echo $my_youtube_content2;?></p> 
                     </div>                  
                 </div>
+
+<?php
+    query_posts('showposts=3&orderby=time&category_name=youtube&paged=$page');
+    while ( have_posts() ) : the_post();
+        //echo '<li>';
+        
+        $my_youtube_title3=get_the_title();//hao add title
+        $my_youtube_content3=get_the_content('Read more...');//hao add content
+        $youtube_permalink3=get_the_permalink();//hao add content
+        $youtube_src3 = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full', false );
+        $youtube_img_src3 = $youtube_src3[0];
+        //echo '</li>';
+
+    endwhile; 
+?>
+
                 <div class="feat_video_content wow fadeInRight" data-wow-delay="0.3s">
                     <div class="video_thrid_thmbnail">
-                            <a href="http://www.sarasdiyhealth.com/test2/article/article4/"><img width="112" height="112" src="http://www.sarasdiyhealth.com/test2/wp-content/uploads/2015/11/cropped-favicon.png" class="attachment-article-post-thumbnail size-article-post-thumbnail wp-post-image" alt="cropped-favicon.png" srcset="http://www.sarasdiyhealth.com/test2/wp-content/uploads/2015/11/cropped-favicon.png 512w, http://www.sarasdiyhealth.com/test2/wp-content/uploads/2015/11/cropped-favicon-150x150.png 150w, http://www.sarasdiyhealth.com/test2/wp-content/uploads/2015/11/cropped-favicon-300x300.png 300w, http://www.sarasdiyhealth.com/test2/wp-content/uploads/2015/11/cropped-favicon-310x310.png 310w" sizes="(max-width: 512px) 100vw, 512px"></a>
+                            <a href="<?php echo $youtube_permalink3; ?>"><img  src="<?php echo $youtube_img_src3; ?>"></a>
                     </div>
                     <div class="video_thrid_content">
-                        <h2><?php echo $my_title; ?></h2>
-                        <p><?php echo $my_content; // get_the_content($feat_video_id_home); ?></p> 
+                        <h2><?php echo $my_youtube_title3;?></h2>
+                        <p><?php echo $my_youtube_content3;?></p> 
                     </div>                  
                 </div>
+
+
+
             </div>
           
         </div>

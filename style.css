@@ -4559,16 +4559,17 @@ STICKY MENU
 }
 .feature_video_section .feat_video_content {
   /*background-color: #000;*/
-  color: #fff;
+  color: #000;
   float: left;
   padding: 89px 0 90px 40px;
   width: 50%;
 }
 .feature_video_section .feat_video_content h2 {
   border-bottom: 1px solid #a5a4a4;
-  color: #fff;
+  color: #000;
   font-family: lato;
-  font-size: 2.8vw;
+  /*font-size: 2.8vw;*/
+  font-size: 25px;
   margin-bottom: 20px;
   padding-bottom: 15px;
   width: 80%;
@@ -6245,9 +6246,14 @@ i.fa.fa-circle {
 
 }
 
+
+/*index chennal right primary*/
 .video_primary_content h2 {
+    border-bottom: 1px solid #a5a4a4;
     font-family: lato;
-    font-size: 30px;
+    font-size: 25px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
 }
 
 
@@ -6263,9 +6269,20 @@ i.fa.fa-circle {
 }
 
 .feature_video_section .feat_video_content {
-    padding: 50px 0 50px 40px;
+    padding: 50px 0 50px 100px;
 
 }
+
+
+.feat_video_content a {
+    padding: 5px 5px;
+    margin-top: 0px;
+}
+
+
+
+
+
 
 /*hao end*/
 
