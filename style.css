@@ -6238,4 +6238,38 @@ i.fa.fa-circle {
     background-color: white !important;
 }
 
+/*hao youtube*/
+.video_primary_content {
+    padding: 20px;
+    padding-top: 40px;
+
+}
+
+.video_primary_content h2 {
+    font-family: lato;
+    font-size: 30px;
+}
+
+
+.video_thrid_content {
+    width: 60%;
+    float: right;
+}
+
+
+.video_thrid_thmbnail {
+    float: left;
+    width: 30%;
+}
+
+.feature_video_section .feat_video_content {
+    padding: 50px 0 50px 40px;
+
+}
+
+/*hao end*/
+
+
+
+
 

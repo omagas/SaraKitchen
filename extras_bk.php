@@ -522,17 +522,35 @@ add_action('aglee_pro_noslider', 'aglee_pro_nosliderdb');
                 $video_feat = get_post_meta( $feat_video_id_home, 'ag_featured_video_id', true );
                 ?>
                 <div class="feat_video">
-                    <?php echo do_shortcode('[video src="'.$myvals.'" ][/video]');  ?>
+                    <?php echo do_shortcode('[video width="300" height="200" src="'.$myvals.'" ][/video]');  ?>
+                    <div class="video_primary_content">
+                      <h2><?php echo $my_title; ?></h2>  
+                      <p><?php echo $my_content; ?></p>
+                    </div>
                 </div>
                 <div class="feat_video_content wow fadeInRight" data-wow-delay="0.3s">
-                    <h2><?php echo $my_title; ?></h2>
-                    <p><?php echo $my_content; // get_the_content($feat_video_id_home); ?></p>
-                    <a href="<?php echo $permalink; ?>" class="readmore readmore_feat_video"><?php echo __('READ MORE','aglee-pro'); ?></a>
-                     
+                    <div class="video_thrid_thmbnail">
+                            <a href="http://www.sarasdiyhealth.com/test2/article/article4/"><img width="112" height="112" src="http://www.sarasdiyhealth.com/test2/wp-content/uploads/2015/11/cropped-favicon.png" class="attachment-article-post-thumbnail size-article-post-thumbnail wp-post-image" alt="cropped-favicon.png" srcset="http://www.sarasdiyhealth.com/test2/wp-content/uploads/2015/11/cropped-favicon.png 512w, http://www.sarasdiyhealth.com/test2/wp-content/uploads/2015/11/cropped-favicon-150x150.png 150w, http://www.sarasdiyhealth.com/test2/wp-content/uploads/2015/11/cropped-favicon-300x300.png 300w, http://www.sarasdiyhealth.com/test2/wp-content/uploads/2015/11/cropped-favicon-310x310.png 310w" sizes="(max-width: 512px) 100vw, 512px"></a>
+                    </div>
+                    <div class="video_thrid_content">
+                        <h2><?php echo $my_title; ?></h2>
+                        <p><?php echo $my_content; // get_the_content($feat_video_id_home); ?></p> 
+                    </div>                  
+                </div>
+                <div class="feat_video_content wow fadeInRight" data-wow-delay="0.3s">
+                    <div class="video_thrid_thmbnail">
+                            <a href="http://www.sarasdiyhealth.com/test2/article/article4/"><img width="112" height="112" src="http://www.sarasdiyhealth.com/test2/wp-content/uploads/2015/11/cropped-favicon.png" class="attachment-article-post-thumbnail size-article-post-thumbnail wp-post-image" alt="cropped-favicon.png" srcset="http://www.sarasdiyhealth.com/test2/wp-content/uploads/2015/11/cropped-favicon.png 512w, http://www.sarasdiyhealth.com/test2/wp-content/uploads/2015/11/cropped-favicon-150x150.png 150w, http://www.sarasdiyhealth.com/test2/wp-content/uploads/2015/11/cropped-favicon-300x300.png 300w, http://www.sarasdiyhealth.com/test2/wp-content/uploads/2015/11/cropped-favicon-310x310.png 310w" sizes="(max-width: 512px) 100vw, 512px"></a>
+                    </div>
+                    <div class="video_thrid_content">
+                        <h2><?php echo $my_title; ?></h2>
+                        <p><?php echo $my_content; // get_the_content($feat_video_id_home); ?></p> 
+                    </div>                  
                 </div>
             </div>
+          
         </div>
     </div> <!-- end section -->
+
  <?php 
     /////} // end of checking 
  }
