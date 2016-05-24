@@ -17,7 +17,7 @@
 
                         <!-- footer_one -->
                         <?php if(is_active_sidebar('aglee_footer_one')) : ?>
-                            <div class="featured-footer-3 featured-footer wow fadeInUp" data-wow-delay="0.6s">
+                            <div class="featured-footer-1 featured-footer wow fadeInUp" data-wow-delay="0.6s">
                                 <?php //dynamic_sidebar('aglee_footer_three'); ?>
 
  
@@ -65,14 +65,26 @@
                         <?php if(is_active_sidebar('aglee_footer_three')) : ?>
                             <div class="featured-footer-3 featured-footer wow fadeInUp" data-wow-delay="0.6s">
                                 <?php //dynamic_sidebar('aglee_footer_three'); ?>
+                                <aside id="recent-posts-3" class="widget widget_recent_entries">        
+                                        <h3 class="widget-title"><span>節目</span></h3>     
+                                <ul>
+                                <?
+                                //$page = (get_query_var('paged')) ? get_query_var('paged') : 1;
+                                query_posts('showposts=4&orderby=time&category_name=youtube&paged=$page'); 
+                                if ( have_posts() ) : while ( have_posts() ) : the_post();
+                                ?>        
+                                        <li>
+                                            <i class="fa fa-circle" aria-hidden="true"></i>
+                                            <a href="<?php the_permalink();?>"><? the_title() ?></a>
+                                            <span class="post-date"><?php echo get_the_date('M j,Y');?></span>
+                                            <a class="button feat-page_readmore_btn" href="<?php the_permalink();?>">
+                                            Read More
+                                            </a>
+                                        </li>
+                                <? endwhile; endif;?>     
 
- 
-                                <aside id="text-8" class="widget widget_text">
-                                    <h3 class="widget-title"><span><a href="http://www.sarasdiyhealth.com/test2/faq-2/">根治飲食FAQ</a></span></h3>          
-                                    <div class="textwidget">
-                                    <?php echo do_shortcode('[metaslider id=660]');?>
-                                    </div>
-                                </aside>                            
+                                </ul>
+                                </aside>                           
 
 
 
