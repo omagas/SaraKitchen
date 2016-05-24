@@ -6129,8 +6129,8 @@ SERVICE ICON LAYOUT
 /*footer hao*/
 .featured-footer {
     float: left;
-    margin-right: 60px;
-    margin-left: 60px;
+/*    margin-right: 60px;
+    margin-left: 60px;*/
 /*    width: 30%;*/
     color: #fff;
 }
@@ -6279,7 +6279,19 @@ i.fa.fa-circle {
     margin-top: 0px;
 }
 
+i.fa.fa-quote-left {
+    float: left;
+    color: rgba(200,200,200,.8);
+}
 
+i.fa.fa-quote-right {
+    float: right;
+    color: rgba(200,200,200,.8);
+}
+
+.feature-post-excerpt p {
+    margin-bottom: 5px;
+}
 
 
 
