@@ -6310,8 +6310,16 @@ i.fa.fa-circle {
     font-size: 15px;
 }
 
+/*youtube page*/
+.esg-entry-content.eg-grant-content.esg-notalone {
+    height: 350px;
+}
 
 
+.esg-entry-media {
+    height: 208px;
+    width: 100%;
+}
 
 /*hao end*/
 
