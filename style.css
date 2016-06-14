@@ -6099,14 +6099,35 @@ SERVICE ICON LAYOUT
     color: #fff;
 }
 
+/*文章 sidebar*/
+div#primary {
+    margin-bottom: 60px;
+    /* float: left; */
+    width: 70%;
+}
 
 
+div#secondary {
+    float: right;
+    width: 27%;
+}
+
+/*側邊欄 客制選單 顏色*/
+#secondary .widget_nav_menu .menu li a {
+    color: #3b73a7;
+}
+
+/*側邊欄 客制選單 子選單 縮排*/
+#secondary ul.sub-menu {
+    padding-left: 20px;
+}
 /*見證*/
-.home .footer-featured-section {
+
+/*.home .footer-featured-section {
     display: none;
     background: #333;
     padding: 50px 0;
-}
+}*/
 
 /*選單*/
 .menu-sarasmenu-container {
@@ -6320,6 +6341,18 @@ i.fa.fa-circle {
     height: 208px;
     width: 100%;
 }
+
+
+/*首頁banner修改*/
+.bx-viewport {
+    height: 350px !important;
+}
+
+.ap-basic-slider-wrapper {
+  margin-bottom: 20px;
+  
+}
+
 
 /*hao end*/
 
