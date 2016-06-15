@@ -5760,9 +5760,10 @@ article.custom-testimonial .entry-content {
     margin-top:0;
 }
 .portfolio_list .protfolio-inner-border{
-    float:left;
+    display: none;
+    /*float:left;
     width:20%;
-    margin-right: 30px;
+    margin-right: 30px;*/
 }
 .portfolio_list .protfolio-inner-border::before, .portfolio_list .protfolio-inner-border::after,
 .portfolio_list .portfolios-inner::before, .portfolio_list .portfolios-inner::after {
@@ -5778,8 +5779,8 @@ article.custom-testimonial .entry-content {
     color: #333;
 }
 .portfolio_list .portfolio_onhover_text{
-    float: right;
-    width: 70%;
+    float: left;
+    width: 100%;
     font-weight: 400;
     font-size: 16px;
     color: #777;
@@ -6100,14 +6101,14 @@ SERVICE ICON LAYOUT
 }
 
 /*文章 sidebar*/
-div#primary {
+.page-id-444 div#primary {
     margin-bottom: 60px;
     /* float: left; */
     width: 70%;
 }
 
 
-div#secondary {
+.page-id-444 div#secondary {
     float: right;
     width: 27%;
 }
@@ -6260,6 +6261,19 @@ i.fa.fa-circle {
     background-color: white !important;
 }
 
+/*header social hao*/
+.social-media-hao {
+    position: fixed;
+    right: 0px;
+    z-index: 9999;
+}
+
+.social-media-hao img {
+    height: 30px;
+}
+
+/*header social hao*/
+
 /*hao youtube*/
 .video_primary_content {
     padding: 20px;
@@ -6353,6 +6367,26 @@ i.fa.fa-circle {
   
 }
 
+/*特徵圖隱藏*/
+#primary .post_img {
+    display: none;
+}
+
+
+/*上一頁 下一頁 next prev*/
+span.previous-link {
+    float: left;
+    color: #5A40A0;
+}
+
+span.next-link {
+    float: right;
+    color: #5A40A0;
+}
+
+.col-md-12 {
+    padding-bottom: 20px;
+}
 
 /*hao end*/
 
