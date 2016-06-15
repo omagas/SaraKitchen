@@ -1665,6 +1665,7 @@ Top Header CSS
     opacity: 1;
     overflow: hidden;
     padding: 0 8px 4px;
+    padding-top: 15px;    
     /* position: absolute; */
     right: -20px;
     top: 35px;
@@ -6263,7 +6264,7 @@ i.fa.fa-circle {
 
 /*header social hao*/
 .social-media-hao {
-    position: fixed;
+    position: absolute;
     right: 0px;
     z-index: 9999;
 }

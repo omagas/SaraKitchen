@@ -16,9 +16,15 @@
                 </a>
                 <a href="https://www.youtube.com/channel/UCa2PO2-QJMf65xCmaAN8xKQ" target="_blank">
                     <img src="http://www.sarasdiyhealth.com/test2/wp-content/uploads/2016/06/icon-youtube3.png">
-                </a>                
+                </a>  
+                <a href="＃" target="_blank">
+                    <img src="http://www.sarasdiyhealth.com/test2/wp-content/uploads/2016/06/icon-line.png">
+                </a>                  
+                <a href="＃" target="_blank">
+                    <img src="http://www.sarasdiyhealth.com/test2/wp-content/uploads/2016/06/icon-wechat.png">
+                </a>                               
             </div>    
-	<header id="masthead" class="site-header layout-one <?php echo $show_top_header; ?> <?php echo $aglee_pro_header_menu_align; ?>" role="banner">
+    <header id="masthead" class="site-header layout-one <?php echo $show_top_header; ?> <?php echo $aglee_pro_header_menu_align; ?>" role="banner">
 
             <div class="top-header clearfix">
                 <div class="ap clearfix">
@@ -78,8 +84,8 @@
                         <?php endif; ?>
                         <?php elseif($show_header == 'header_text_only') : ?>
                             <div class="header-text-container">
-                        	   <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-                        		<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+                               <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+                                <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
                             </div>
                         <?php else : ?>
                             <?php if(get_header_image()) : ?>
@@ -88,25 +94,25 @@
                                 </div>
                             <?php endif; ?>
                                 <div class="header-text-container">
-                        		  <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-                        		  <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+                                  <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+                                  <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
                                 </div>
                             <?php endif; ?>
                         <?php endif; ?>
-          		</div><!-- .site-branding -->
+                </div><!-- .site-branding -->
                 
                 <div class="menu-wrapper"> 
                     <div class="ap">
                         <a class="menu-trigger"><span></span><span></span><span></span></a>   
-                		<nav id="site-navigation" class="main-navigation" role="navigation">
-                			<button class="menu-toggle hide" aria-controls="primary-menu" aria-expanded="false"><i class="fa fa-bars"></i></button>
-                			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-                		</nav><!-- #site-navigation -->
+                        <nav id="site-navigation" class="main-navigation" role="navigation">
+                            <button class="menu-toggle hide" aria-controls="primary-menu" aria-expanded="false"><i class="fa fa-bars"></i></button>
+                            <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+                        </nav><!-- #site-navigation -->
                     </div>
                 </div>
             </div>
             <nav id="site-navigation-responsive" class="main-navigation-responsive">
-    			<button class="menu-toggle hide" aria-controls="primary-menu" aria-expanded="false"><?php _e( 'Primary Menu', 'aglee-pro' ); ?></button>
-    			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-    		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+                <button class="menu-toggle hide" aria-controls="primary-menu" aria-expanded="false"><?php _e( 'Primary Menu', 'aglee-pro' ); ?></button>
+                <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+            </nav><!-- #site-navigation -->
+    </header><!-- #masthead -->
