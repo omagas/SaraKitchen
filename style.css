@@ -6073,9 +6073,13 @@ SERVICE ICON LAYOUT
     margin-left: 10%;
 }
 
-/*最新書籍*/
+/*最新文章*/
 .team_post img {
     border-radius: 10px;
+}
+
+.team_post img {
+    height: 210px;
 }
 
 /*見證*/
@@ -6150,6 +6154,13 @@ SERVICE ICON LAYOUT
 }
 
 /*footer hao*/
+
+/*#clear #float #文章*/
+footer#colophon {
+    clear: both;
+}
+
+
 .featured-footer {
     float: left;
 /*    margin-right: 60px;
