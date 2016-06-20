@@ -6400,6 +6400,11 @@ span.next-link {
     padding-bottom: 20px;
 }
 
+
+.search.search-no-results footer.site-footer {
+    position: relative;
+}
+
 /*hao end*/
 
 
