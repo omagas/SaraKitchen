@@ -6432,7 +6432,32 @@ span.page-numbers.current {
 .cart_email_wrap {
     display: none;
 }
-/*hao end*/
+
+/*footer 警語*/
+.copyright-warning {
+    font-size: 13px;
+    padding-bottom: 10px;
+}
+
+/*footer readmore remove*/
+.footer-featured-section a.button.feat-page_readmore_btn {
+    display: none;
+}
+
+/*post author admin remove*/
+.single .entry-meta {
+    display: none;
+}
+
+
+/*catagory.php 分類彙整 下方tag cate 隱藏*/
+.ap-container.clearfix.hao-customize footer.entry-footer {
+    display: none;
+}
+.hao-customize .entry-title {
+    padding-left: 0px;
+}
+/******************************hao end*******************************/
 
 
 /*reyes*/

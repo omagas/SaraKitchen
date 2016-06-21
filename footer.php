@@ -42,7 +42,7 @@
                                 <ul>
                                 <?
                                 //$page = (get_query_var('paged')) ? get_query_var('paged') : 1;
-                                query_posts('showposts=4&orderby=time&category_name=article&paged=$page'); 
+                                query_posts('showposts=4&orderby=time&category_name=文章POST&paged=$page'); 
                                 if ( have_posts() ) : while ( have_posts() ) : the_post();
                                 ?>        
                                         <li>
@@ -107,11 +107,13 @@
         
         <div class="site-info">
             <div class="ap-container clearfix">
+
+                <div class="copyright-warning">「本網站中的想法、作法和建議，是在補充而非取代專業醫生的建議。內容無意或隱含代表專業醫學的意見、診斷或治療。建議讀者在進行治療之前，先諮詢醫生。」</div>
                 <div class="copyright-info">
-                    Copyright &copy; <?php the_date( 'Y' ); ?> <a href="<?php get_home_url(); ?>">添翼創越工作室
-                    </a>
+                    Copyright &copy; <?php the_date( 'Y' ); ?> <!--a href="<?php get_home_url(); ?>">添翼創越工作室
+                    </a-->鄉村人商店有限公司 
                       
-            </div>
+                </div>
         </div><!-- .site-info -->
     </footer><!-- #colophon -->
 </div><!-- #page -->
