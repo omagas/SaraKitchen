@@ -6427,6 +6427,11 @@ span.page-numbers.page-num {
 span.page-numbers.current {
     padding-left: 20px;
 }
+
+/*右側浮動mail icon*/
+.cart_email_wrap {
+    display: none;
+}
 /*hao end*/
 
 
