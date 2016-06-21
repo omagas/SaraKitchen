@@ -729,7 +729,7 @@ function aglee_pro_team_section_home_cb(){
 function aglee_pro_team_section_home_cb(){
     //$team_title = get_theme_mod('team_home_title_setting');
 
-    query_posts('showposts=3&orderby=time&category_name=article&paged=$page');
+    query_posts('showposts=3&orderby=time&category_name=文章POST&paged=$page');
     while ( have_posts() ) : the_post();
         //echo '<li>';
         
@@ -743,7 +743,7 @@ function aglee_pro_team_section_home_cb(){
 
     wp_reset_query();
 
-    query_posts('showposts=2&orderby=time&category_name=article&paged=$page');
+    query_posts('showposts=2&orderby=time&category_name=文章POST&paged=$page');
     while ( have_posts() ) : the_post();
         //echo '<li>';
         
@@ -756,7 +756,7 @@ function aglee_pro_team_section_home_cb(){
     endwhile; 
 
 
-     query_posts('showposts=1&orderby=time&category_name=article&paged=$page');
+     query_posts('showposts=1&orderby=time&category_name=文章POST&paged=$page');
     while ( have_posts() ) : the_post();
         //echo '<li>';
         

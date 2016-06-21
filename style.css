@@ -6065,7 +6065,7 @@ SERVICE ICON LAYOUT
 }
 
 
-/*hao*/
+/******************************************HAO****************************************/
 .header-logo-container img {
     width: 300px;
 }
@@ -6409,6 +6409,24 @@ span.next-link {
     position: relative;
 }
 
+/*menu mod*/
+#site-navigation ul li a {
+  padding: 0 10px;
+}
+
+
+/*文章分頁*/
+a.page-numbers {
+    padding-left: 20px;
+}
+
+span.page-numbers.page-num {
+    padding-right: 20px;
+}
+
+span.page-numbers.current {
+    padding-left: 20px;
+}
 /*hao end*/
 
 

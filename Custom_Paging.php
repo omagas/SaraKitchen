@@ -18,7 +18,7 @@
 
     <div class="ag-container">
          
-        
+         <?php get_sidebar('right'); ?>
         <div id="primary" class="content-area">
 
         <article  class="page type-page status-publish hentry">
@@ -36,7 +36,7 @@
 
   $custom_args = array(
       'post_type' => 'post',
-      'category_name' => 'article',
+      'category_name' => '文章POST',
       'posts_per_page' => 5,
       'paged' => $paged
     );
@@ -55,11 +55,11 @@
                                                 <a href="<?php the_permalink();?>"><?php the_post_thumbnail('article-post-thumbnail'); ?></a>
                                                 </div>
                                             </div>
-                                            <div class="portfolio_onhover_text">
-                                                <h2><? the_title() ?></h2>
+                                            <div class="portfolio_onhover">
+                                                <h2><a href="<?php the_permalink();?>"><? the_title() ?><a></h2>
                                                 <span><?php echo get_the_date('M j,Y');?></span>
                                                 <p><?php the_excerpt(); ?></p>
-                                                <a href="<?php the_permalink();?>">Read More</a>
+                                                <!--a href="<?php the_permalink();?>">Read More</a-->
                                             </div>
                             </div><!-- end of protfolios -->
 
