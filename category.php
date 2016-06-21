@@ -49,7 +49,7 @@
     }
  
 get_header(); ?>
-	<main id="main" class="site-main <?php echo esc_attr($aglee_pro_content_class).' '.esc_attr($aglee_pro_blog_display_class); ?>" role="main">
+    <main id="main" class="site-main <?php echo esc_attr($aglee_pro_content_class).' '.esc_attr($aglee_pro_blog_display_class); ?>" role="main">
         <!-- banner part -->
         <?php
             $aglee_pro_header_banner_background = get_theme_mod('show_header_banner_setting','1');
@@ -59,32 +59,38 @@ get_header(); ?>
         ?>
         <!-- end banner part -->
         
-        <div class="ap-container clearfix hao">
+        <div class="ap-container clearfix hao-customize">
         <?php if($aglee_pro_default_layout == 'both_sidebar') : ?>
             <div id="primary-wrap" class="clearfix">
         <?php endif; ?>
             <div id="primary" class="content-area">
         
-        			<?php /* Start the Loop */ ?>
-        			<?php while ( have_posts() ) : the_post(); ?>
+                    <?php /* Start the Loop */ ?>
+                    <?php while ( have_posts() ) : the_post(); ?>
         
-        				<?php
-        					/* Include the Post-Format-specific template for the content.
-        					 * If you want to override this in a child theme, then include a file
-        					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-        					 */
-        					get_template_part( 'template-parts/content', get_post_format() );
-        				?>
+                        <?php
+                            /* Include the Post-Format-specific template for the content.
+                             * If you want to override this in a child theme, then include a file
+                             * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+                             */
+                            get_template_part( 'template-parts/content-category', get_post_format() );
+                        ?>
         
-        			<?php endwhile; ?>
+                    <?php endwhile; ?>
         
-        			<?php //the_posts_navigation(); ?>
+                    <?php //the_posts_navigation(); ?>
+
+    <?php
+      if (function_exists(custom_pagination)) {
+        custom_pagination($custom_query->max_num_pages,"",$paged);
+      }
+    ?>                    
         
-        		<?php if ( !have_posts() ) : ?>
+                <?php if ( !have_posts() ) : ?>
         
-        			<?php get_template_part( 'content', 'none' ); ?>
+                    <?php get_template_part( 'content', 'none' ); ?>
         
-        		<?php endif; ?>
+                <?php endif; ?>
             </div><!-- #primary -->
             <?php if($aglee_pro_default_layout == 'left_sidebar' || $aglee_pro_default_layout == 'both_sidebar') : ?>
                 <?php get_sidebar('left'); ?>
@@ -96,5 +102,5 @@ get_header(); ?>
             <?php get_sidebar('right'); ?>
         <?php endif; ?>
         </div>
-	</main><!-- #main -->
+    </main><!-- #main -->
 <?php get_footer(); ?>

@@ -1356,7 +1356,7 @@ add_action('aglee_pro_team_home_section','aglee_pro_team_section_home_cb');
             if ( is_category() ) {
               $thisCat = get_category(get_query_var('cat'), false);
               if ($thisCat->parent != 0) echo get_category_parents($thisCat->parent, TRUE, ' ' . $delimiter . ' ');
-              echo $before . 'Archive by category "' . single_cat_title('', false) . '"' . $after;
+              echo $before . '"' . single_cat_title('', false) . '"' . $after;
           
             } elseif ( is_search() ) {
               echo $before . 'Search results for "' . get_search_query() . '"' . $after;
@@ -1488,7 +1488,7 @@ add_action('aglee_pro_team_home_section','aglee_pro_team_section_home_cb');
 
             
             <div class="ag-container">
-                <h1 class="entry-title" style="">
+                <h1 class="entry-title hao-entry-title" style="">
                     <?php 
                         if(class_exists( 'WooCommerce' )){
                             if(is_shop()){
@@ -1496,6 +1496,9 @@ add_action('aglee_pro_team_home_section','aglee_pro_team_section_home_cb');
                                 }else{
                                     the_title();
                                 }
+                            }elseif ( is_category() ){//haoextras mod
+                                    echo "分類";
+
                             }else { the_title(); }//if(is_shop()){ woocommerce_page_title();  }else{ the_title(); }?></h1>
                 <?php
                 $aglee_pro_show_breadcum_option = get_theme_mod('show_header_banner_setting', '1');

@@ -6128,6 +6128,7 @@ SERVICE ICON LAYOUT
 /*側邊欄 客制選單 子選單 縮排*/
 #secondary ul.sub-menu {
     padding-left: 20px;
+    display: block !important;
 }
 /*見證*/
 
@@ -6456,6 +6457,14 @@ span.page-numbers.current {
 }
 .hao-customize .entry-title {
     padding-left: 0px;
+}
+
+/*＃麵包屑＃breadcrumb(修改extra.php> aglee_pro_breadcrumb_section_cb& aglee_pro_header_banner_section_cb)*/
+h1.entry-title.hao-entry-title {
+    font-size: 3vw;
+    position: relative;
+    z-index: 1;
+    color: #fff;
 }
 /******************************hao end*******************************/
 
