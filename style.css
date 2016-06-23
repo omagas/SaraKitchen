@@ -6097,6 +6097,16 @@ SERVICE ICON LAYOUT
     box-shadow: 1px 1px 5px grey;
 }
 
+/*首頁 影片 Video hao*/
+.feature_video_section_title h2 {
+    border-bottom: 1px solid #e3dfdf;
+    text-align: center;
+    color: #5A40A0;
+    font-size: 2.5vw;
+    margin: auto auto 50px;
+    padding-bottom: 10px;
+    width: 50%;
+}
 
 /*文章*/
 .team-container {

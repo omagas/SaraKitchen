@@ -525,7 +525,11 @@ add_action('aglee_pro_noslider', 'aglee_pro_nosliderdb');
     ?>
     <div id="feature_video_section" class="clearfix"> <!-- start section -->
         <div class="featured-video-wrapper-block clearfix">
+
             <div class="feature_video_section clearfix">
+                <div class="feature_video_section_title">
+                    <h2 class="wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">影片VIDEO</h2>
+                </div>
                 <?php          
                 $video_feat = get_post_meta( $feat_video_id_home, 'ag_featured_video_id', true );
                 ?>
