@@ -48,7 +48,7 @@ get_header(); ?>
         <!-- banner part -->
         <?php do_action('aglee_pro_banner_section');  ?> 
         <!-- end banner part -->
-    
+    	<div class="FAQ_list_link" style="visibility:hidden"><a href="http://www.sarasdiyhealth.com/test2/%e6%a0%b9%e6%b2%bb%e9%a3%b2%e9%a3%9f-faq/">回根治飲食FAQ</a></div>
         <div class="ap-container">
             <?php if($default_post_layout == 'both_sidebar') : ?>
                 <div id="primary-wrap" class="clearfix">
@@ -59,6 +59,7 @@ get_header(); ?>
                             //previous_post_link( '%link', 'Prev post in category', true );
                             //next_post_link( '%link', 'Next post in category', true );
                         ?>
+		
             <div class="col-md-12">            
             <span class="previous-link"><?php previous_post_link("上一篇: %link","%title", true); ?></span>
             <span class="next-link"><?php next_post_link("下一篇: %link","%title", true); ?></span> 

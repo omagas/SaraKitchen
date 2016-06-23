@@ -1,0 +1,9 @@
+//Rewrite to www
+Options +FollowSymLinks
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^sarasdiyhealth.com[nc]
+RewriteRule ^(.*)$ http://www.sarasdiyhealth.com/$1 [r=301,nc]
+
+//301 Redirect Entire Directory
+RedirectMatch 301 /test2/category/根治飲食faq/(.*) /test2/%E6%A0%B9%E6%B2%BB%E9%A3%B2%E9%A3%9F-faq//$1
+ 
