@@ -6372,22 +6372,42 @@ i.fa.fa-circle {
     font-size: 15px;
 }
 
-/*youtube 列表 page*/
+/*ess.Grid--------------------------------------------------*/
+/*ess.Grid youtube 列表 page*/
 .esg-entry-content.eg-grant-content.esg-notalone {
-    height: 350px;
+    height: 250px;
 }
 
 
-/*FAQ 列表 page*/
+/*ess.Grid FAQ 列表 page*/
 .esg-entry-content.eg-faq-content.esg-notalone {
-    height: 350px;
+    height: 250px;
 }
 
+/*ess.Grid 節目列表 背景改黑色*/
 .esg-entry-media {
     height: 208px;
     width: 100%;
+
 }
 
+/*節目 content 高度*/
+.eg-grant-element-6 {
+    overflow: hidden;
+    position: relative;
+    line-height: 1.2em;
+    max-height: 4.8em;
+    text-align: justify;
+}
+
+.eg-faq-element-6{
+    overflow: hidden;
+    position: relative;
+    line-height: 1.2em;
+    max-height: 4.8em;
+    text-align: justify;    
+}
+/*ess.Grid--------------------------------------------------*/
 
 /*首頁banner修改*/
 .bx-viewport {
@@ -6504,6 +6524,8 @@ visibility: visible !important;
     color: #fff;
     font-size: 45px;
 }
+
+
 /******************************hao end*******************************/
 
 
