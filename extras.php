@@ -153,7 +153,9 @@ endif;
                                         <div class="slider_image"><img src="<?php echo esc_url($aglee_pro_slider_logo['url']); ?>"/></div>
                                         <?php } ?>
                                         <div class="slider_cont"><?php echo $content_post->post_content; ?></div>
-                                        <a target="_blank" href="<?php echo get_the_permalink($rowslide); ?>"><?php _e($readmore_option); ?></a>
+                                        <!--a target="_blank" href="<?php echo get_the_permalink($rowslide); ?>"><?php _e($readmore_option); ?></a-->
+                                        <!--/*首頁 Banner ReadMore 修改為icon*/-->
+                                        <a target="_blank" href="<?php echo get_the_permalink($rowslide); ?>"><i class="fa fa-external-link fa-5" aria-hidden="true"></i></a>                                        
                                     </div>
                                 </li>
                             <?php }
@@ -177,7 +179,9 @@ endif;
                                             <div class="slider_image"><img src="<?php echo esc_url($aglee_pro_slider_logo['url']); ?>"/></div>
                                         <?php } ?>
                                         <div class="slider_cont"><?php the_excerpt(); ?></div>
-                                        <a target="_blank" href="<?php the_permalink(); ?>"><?php _e($readmore_option); ?></a>
+                                        <!--a target="_blank" href="<?php the_permalink(); ?>"><?php _e($readmore_option); ?></a-->
+                                        <!--/*首頁 Banner ReadMore 修改為icon*/-->
+                                        <a target="_blank" href="<?php the_permalink(); ?>"><i class="fa fa-external-link fa-5" aria-hidden="true"></i></a>
                                     </div>
                                 </li>
                            <?php }

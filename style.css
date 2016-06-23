@@ -6372,11 +6372,16 @@ i.fa.fa-circle {
     font-size: 15px;
 }
 
-/*youtube page*/
+/*youtube 列表 page*/
 .esg-entry-content.eg-grant-content.esg-notalone {
     height: 350px;
 }
 
+
+/*FAQ 列表 page*/
+.esg-entry-content.eg-faq-content.esg-notalone {
+    height: 350px;
+}
 
 .esg-entry-media {
     height: 208px;
@@ -6489,6 +6494,15 @@ visibility: visible !important;
     font-size: 32px;
     text-align: center;
     margin-bottom: 20px;
+}
+
+
+/*首頁 Banner ReadMore 修改為icon*/
+.caption_wrap > a {
+
+    border: 0px solid #fff;
+    color: #fff;
+    font-size: 45px;
 }
 /******************************hao end*******************************/
 

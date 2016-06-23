@@ -48,7 +48,8 @@ get_header(); ?>
         <!-- banner part -->
         <?php do_action('aglee_pro_banner_section');  ?> 
         <!-- end banner part -->
-    	<div class="FAQ_list_link" style="visibility:hidden"><a href="http://www.sarasdiyhealth.com/test2/%e6%a0%b9%e6%b2%bb%e9%a3%b2%e9%a3%9f-faq/">回根治飲食FAQ</a></div>
+        <!--FAQ 內文 只有選使用no-sidebar-narraow  會秀出 回FAQ列表-->
+    	<div class="FAQ_list_link" style="visibility:hidden"><a href="http://www.sarasdiyhealth.com/test2/%e6%a0%b9%e6%b2%bb%e9%a3%b2%e9%a3%9f-faq/">>>回根治飲食FAQ</a></div>
         <div class="ap-container">
             <?php if($default_post_layout == 'both_sidebar') : ?>
                 <div id="primary-wrap" class="clearfix">
