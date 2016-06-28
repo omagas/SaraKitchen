@@ -6301,7 +6301,10 @@ i.fa.fa-circle {
 
 /*header social hao*/
 
-/*hao youtube*/
+
+
+
+/*hao index Video 節目 youtube*/
 .video_primary_content {
     padding: 20px;
     padding-top: 40px;
@@ -6320,8 +6323,8 @@ i.fa.fa-circle {
 
 
 .video_thrid_content {
-    width: 60%;
-    float: right;
+    width: 80%;
+    /*float: right;*/
 }
 
 
@@ -6347,6 +6350,34 @@ i.fa.fa-circle {
     margin-top: 0px;
 }
 
+
+/*內頁 節目Video 下方meta隱藏*/
+.ayvpp_video_meta_data {
+    display: none;
+}
+
+iframe.ayvpp {
+    margin-bottom: 20px;
+    padding-left: 20%;
+    padding-right: 20%;
+ 
+}
+
+/*.no-sidebar-wide #primary {
+    width: 70%;
+    margin: 0px auto;
+    margin-bottom: 30px;
+}*/
+
+
+/*內頁 節目Video youtube影片縮小至70%*/
+/*article .entry-content {
+    position: relative;
+    width: 70%;
+    margin: 0px auto;
+}*/
+
+/*Video End*/
 i.fa.fa-quote-left {
     float: left;
     color: rgba(200,200,200,.8);
@@ -6384,7 +6415,7 @@ i.fa.fa-circle {
     height: 250px;
 }
 
-/*ess.Grid 節目列表 背景改黑色*/
+/*ess.Grid 節目列表 */
 .esg-entry-media {
     height: 208px;
     width: 100%;
@@ -6399,7 +6430,7 @@ i.fa.fa-circle {
     max-height: 4.8em;
     text-align: justify;
 }
-
+/*FAQ content 高度*/
 .eg-faq-element-6{
     overflow: hidden;
     position: relative;

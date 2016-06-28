@@ -511,7 +511,7 @@ add_action('aglee_pro_noslider', 'aglee_pro_nosliderdb');
    $feat_video_id_home = get_theme_mod('home_feature_video_setting');
    //////if($feat_video_id_home){
 
-    query_posts('showposts=1&orderby=time&category_name=youtube&paged=$page'); 
+    query_posts('showposts=1&orderby=time&category_name=節目VIDEO&paged=$page'); 
     // while ( have_posts() ){
 
 
@@ -541,12 +541,12 @@ add_action('aglee_pro_noslider', 'aglee_pro_nosliderdb');
                     <?php echo do_shortcode('[video  src="'.$myvals.'" ][/video]');  ?>
                     <div class="video_primary_content">
                       <h2><?php echo $my_title; ?></h2>  
-                      <p><?php echo $my_content; ?></p>
+                      <p><?php the_excerpt(); ?></p>
                     </div>
                 </div>
 
 <?php
-    query_posts('showposts=2&orderby=time&category_name=youtube&paged=$page');
+    query_posts('showposts=2&orderby=time&category_name=節目VIDEO&paged=$page');
     while ( have_posts() ) : the_post();
         //echo '<li>';
         
@@ -560,17 +560,17 @@ add_action('aglee_pro_noslider', 'aglee_pro_nosliderdb');
     endwhile; 
 ?>
                 <div class="feat_video_content wow fadeInRight" data-wow-delay="0.3s">
-                    <div class="video_thrid_thmbnail">
+                    <!--div class="video_thrid_thmbnail">
                             <a href="<?php echo $youtube_permalink2; ?>"><img   src="<?php echo $youtube_img_src2; ?>"></a>
-                    </div>
+                    </div-->
                     <div class="video_thrid_content">
                         <h2><?php echo $my_youtube_title2;?></h2>
-                        <p><?php echo $my_youtube_content2;?></p> 
+                        <p><?php echo the_excerpt();?></p> 
                     </div>                  
                 </div>
 
 <?php
-    query_posts('showposts=3&orderby=time&category_name=youtube&paged=$page');
+    query_posts('showposts=3&orderby=time&category_name=節目VIDEO&paged=$page');
     while ( have_posts() ) : the_post();
         //echo '<li>';
         
@@ -585,12 +585,12 @@ add_action('aglee_pro_noslider', 'aglee_pro_nosliderdb');
 ?>
 
                 <div class="feat_video_content wow fadeInRight" data-wow-delay="0.3s">
-                    <div class="video_thrid_thmbnail">
+                    <!--div class="video_thrid_thmbnail">
                             <a href="<?php echo $youtube_permalink3; ?>"><img  src="<?php echo $youtube_img_src3; ?>"></a>
-                    </div>
+                    </div-->
                     <div class="video_thrid_content">
                         <h2><?php echo $my_youtube_title3;?></h2>
-                        <p><?php echo $my_youtube_content3;?></p> 
+                        <p><?php echo the_excerpt();?></p> 
                     </div>                  
                 </div>
 

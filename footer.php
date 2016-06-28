@@ -70,7 +70,7 @@
                                 <ul>
                                 <?
                                 //$page = (get_query_var('paged')) ? get_query_var('paged') : 1;
-                                query_posts('showposts=4&orderby=time&category_name=youtube&paged=$page'); 
+                                query_posts('showposts=4&orderby=time&category_name=節目VIDEO&paged=$page'); 
                                 if ( have_posts() ) : while ( have_posts() ) : the_post();
                                 ?>        
                                         <li>

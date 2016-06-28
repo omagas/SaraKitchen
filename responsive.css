@@ -964,6 +964,17 @@
 
 }
 
+@media screen and (min-width: 540px){
+	a.a2a_button_wechat {
+	    display: none !important;
+	}
+
+	a.a2a_button_line {
+	    display: none !important;
+	}
+
+}
+
 
 @media screen and (max-width: 540px){
 /*hao*/
@@ -971,13 +982,17 @@
 		display: none;
 	}	
 
-	a.a2a_button_wechat {
-	    display: none !important;
+	.bx-viewport {
+	    height: 150px !important;
+	}	
+
+	.header-logo-container {
+	    height: 100px;
 	}
 
-	a.a2a_button_line {
-	    display: none !important;
-	}	
+
+
+	
 /*hao*/
 	.aglee-span1, .aglee-span2, .aglee-span3, .aglee-span4, .aglee-span5 {
 		width: 100%;
