@@ -982,17 +982,61 @@
 		display: none;
 	}	
 
+	/*banner 高度 */
 	.bx-viewport {
 	    height: 150px !important;
 	}	
 
+	/*logo 高度*/
 	.header-logo-container {
 	    height: 100px;
 	}
 
+	/*video 寬度 對齊*/
+	.video_thrid_content {
+	    width: 100%;
+	    padding-left: 20px;
+	    padding-right: 20px;
+	}	
+
+	.feature_video_section .feat_video {
+	    padding-left: 3%;
+	    padding-right: 6%;
+	}	
 
 
+	/*最新文章 和 下篇間距*/
+	.team_post {
+	    margin-bottom: 20px;
+	}	
+
+	/*搜尋bar對齊*/
+	.aglee-search {
+	    margin-right: 30px;
+	    margin-top: 20px;
+	}
+
+	/*菜單補滿100%*/
+	.menu.nav-menu {
+	    width: 180%;
+	}
 	
+	/*最新文章頁補滿100%*/
+	.page-id-444 div#primary {
+	    margin-bottom: 60px;
+	    /* float: left; */
+	    width: 100%;
+	}	
+
+	/*最新文章 下一頁*/
+	nav.custom-pagination {
+	    margin-left: 30px;
+	}	
+
+	/*about us header*/
+	.about-header p{
+		font-size: 2em;
+	}
 /*hao*/
 	.aglee-span1, .aglee-span2, .aglee-span3, .aglee-span4, .aglee-span5 {
 		width: 100%;
