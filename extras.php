@@ -302,7 +302,7 @@ add_action('aglee_pro_noslider', 'aglee_pro_nosliderdb');
                     <div class="feature-post-excerpt">
                         <i class="fa fa-quote-left fa-4" aria-hidden="true"></i>
                         <br>
-                        <p><?php echo wp_trim_words($my_content1,50); ?></p>
+                        <p><?php echo wp_trim_words($my_title1,50); ?></p>
                         <i class="fa fa-quote-right fa-4" aria-hidden="true"></i>               
                     </div>
                     <a class="feat_readmore-button readmore-button" href="<?php echo $permalink1; ?>">
@@ -325,7 +325,7 @@ add_action('aglee_pro_noslider', 'aglee_pro_nosliderdb');
                     <div class="feature-post-excerpt">
                         <i class="fa fa-quote-left fa-4" aria-hidden="true"></i>
                         <br>
-                        <p><?php echo wp_trim_words($my_content1,50); ?></p>
+                        <p><?php echo wp_trim_words($my_title2,50); ?></p>
                         <i class="fa fa-quote-right fa-4" aria-hidden="true"></i>               
                     </div>
                     <a class="feat_readmore-button readmore-button" href="<?php echo $permalink2; ?>">
@@ -349,7 +349,7 @@ add_action('aglee_pro_noslider', 'aglee_pro_nosliderdb');
                     <div class="feature-post-excerpt">
                         <i class="fa fa-quote-left fa-4" aria-hidden="true"></i>
                         <br>
-                        <p><?php echo wp_trim_words($my_content1,50); ?></p>
+                        <p><?php echo wp_trim_words($my_title3,50); ?></p>
                         <i class="fa fa-quote-right fa-4" aria-hidden="true"></i>               
                     </div>
                     <a class="feat_readmore-button readmore-button" href="<?php echo $permalink3; ?>">
@@ -540,7 +540,7 @@ add_action('aglee_pro_noslider', 'aglee_pro_nosliderdb');
                 <div class="feat_video">
                     <?php echo do_shortcode('[video  src="'.$myvals.'" ][/video]');  ?>
                     <div class="video_primary_content">
-                      <h2><?php echo $my_title; ?></h2>  
+                      <h2><a href="<?php echo $permalink; ?>"><?php echo $my_title; ?></a></h2>  
                       <p><?php the_excerpt(); ?></p>
                     </div>
                 </div>
@@ -564,7 +564,7 @@ add_action('aglee_pro_noslider', 'aglee_pro_nosliderdb');
                             <a href="<?php echo $youtube_permalink2; ?>"><img   src="<?php echo $youtube_img_src2; ?>"></a>
                     </div-->
                     <div class="video_thrid_content">
-                        <h2><?php echo $my_youtube_title2;?></h2>
+                        <h2><a href="<?php echo $youtube_permalink2; ?>"><?php echo $my_youtube_title2;?></a></h2>
                         <p><?php echo the_excerpt();?></p> 
                     </div>                  
                 </div>
@@ -589,7 +589,7 @@ add_action('aglee_pro_noslider', 'aglee_pro_nosliderdb');
                             <a href="<?php echo $youtube_permalink3; ?>"><img  src="<?php echo $youtube_img_src3; ?>"></a>
                     </div-->
                     <div class="video_thrid_content">
-                        <h2><?php echo $my_youtube_title3;?></h2>
+                        <h2><a href="<?php echo $youtube_permalink3; ?>"><?php echo $my_youtube_title3;?></a></h2>
                         <p><?php echo the_excerpt();?></p> 
                     </div>                  
                 </div>

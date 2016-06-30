@@ -1037,6 +1037,12 @@
 	.about-header p{
 		font-size: 2em;
 	}
+
+	.page-id-444 div#secondary {
+	    width: 100%;
+	    padding-left: 50px;
+	    display: block;
+	}	
 /*hao*/
 	.aglee-span1, .aglee-span2, .aglee-span3, .aglee-span4, .aglee-span5 {
 		width: 100%;

@@ -4593,7 +4593,7 @@ STICKY MENU
   background: #000 none repeat scroll 0 0 !important;
 }
 .feat_video_content a {
-  border: 2px solid #fff;
+  /*border: 2px solid #fff;*/
   display: inline-block;
   font-family: lato;
   font-weight: 600;
@@ -4604,7 +4604,7 @@ STICKY MENU
 }
 .feat_video_content a:after{
     content: '';
-    background: #fff;
+/*    background: #fff;*/
     position:absolute;
     height:100%;
     width:0;
@@ -4615,7 +4615,7 @@ STICKY MENU
     z-index: -1;
 }
 .feat_video_content a:hover{
-    color:#000;
+    color: #295074;
 }
 .feat_video_content a:hover:after{
     width:100%;
@@ -6120,7 +6120,7 @@ SERVICE ICON LAYOUT
 /*文章 sidebar*/
 .page-id-444 div#primary {
     margin-bottom: 60px;
-    /* float: left; */
+    float: left; 
     width: 70%;
 }
 
@@ -6316,6 +6316,7 @@ i.fa.fa-circle {
 .video_primary_content h2 {
     border-bottom: 1px solid #a5a4a4;
     font-family: lato;
+    font-weight: 600;
     font-size: 25px;
     margin-bottom: 20px;
     padding-bottom: 15px;
@@ -6690,5 +6691,50 @@ visibility: visible !important;
 
 
 /*reyes end*/
+
+
+/*hao contact css */
+
+.contact-content {
+    padding-top: 50px;
+    background-image: url('http://www.sarasdiyhealth.com/wp-content/uploads/2016/06/contact-mail-bg.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+
+
+
+.mail-first {
+    width: 50%;float: left;text-align: center;padding-left: 20%;
+}
+
+.mail-second {
+    width: 50%;
+    float: right;
+    text-align: center;
+    padding-right: 20%;
+}
+
+.content-mail h2 {
+    font-size: 20px;
+    padding-top: 20px;
+    color: #593da6;
+    font-weight: 400;
+}
+
+.content-mail {margin-bottom: 100px;}
+
+.content-description {
+    text-align: center;
+    margin-bottom: 100px;
+    padding-top: 50px;
+}
+
+.content-youtube {
+    padding-top: 50px;
+}
+
+
+/*hao end*/
 
 

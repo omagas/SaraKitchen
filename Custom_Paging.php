@@ -18,7 +18,7 @@
 
     <div class="ag-container">
          
-         <?php get_sidebar('right'); ?>
+         
         <div id="primary" class="content-area">
 
         <article  class="page type-page status-publish hentry">
@@ -86,7 +86,7 @@
         </article><!-- #post-## -->   
         </div><!-- #primary -->    
 
-
+        <?php get_sidebar('right'); ?>
 
 
 
