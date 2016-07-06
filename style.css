@@ -6557,6 +6557,13 @@ visibility: visible !important;
     font-size: 45px;
 }
 
+/*首頁 banner caption*/
+.slider_cont {
+    display: none;
+}
+
+
+
 
 /******************************hao end*******************************/
 
