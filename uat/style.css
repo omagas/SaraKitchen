@@ -4699,7 +4699,7 @@ STICKY MENU
     cursor: pointer;
 }
 .team_post::after {
-  background: rgba(0, 0, 0, 0.35);
+  background: rgba(0, 0, 0, 0.56);
   content: "";
   height: 100%;
   left: 0;
@@ -6084,6 +6084,52 @@ SERVICE ICON LAYOUT
     height: 210px;
 }
 
+
+/*首頁-最新文章區塊*/
+.team_post img {
+    visibility: hidden;
+    height: 210px;
+}
+
+/*
+.team_post:hover .main_team_cont {
+    bottom: 70%;
+}
+*/
+
+.team_post .main_team_cont {
+    top: 10%;
+}
+
+.team_post .team_short_content_home {
+    opacity: 1;
+}
+
+.team_short_content_home {
+    top: 100px;
+}
+
+.team_title_home {
+
+    text-align: -webkit-left;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.team_short_content_home {
+    text-align: -webkit-left;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+/*index video*/
+.mejs-overlay-button {
+    visibility: hidden;
+}
+
+
+/*首頁-最新文章區塊 ＥＮＤ*/
+
 /*見證*/
 .feature-post-wrap figure.feature-post-thumbnail img {
     -webkit-transition: all 0.5s ease-in-out;
@@ -6587,7 +6633,26 @@ visibility: visible !important;
 }
 
 
+/*首頁-書籍books*/
 
+.ag-container {
+    padding-right: 5%;
+}
+
+
+.metaslider.nav-hidden .flexslider {
+
+    padding-left: 2%;
+}   
+
+
+.metaslider .slides img {
+
+    border-width: 1px;
+    border-style: dotted;
+}
+
+/*首頁-書籍books END*/
 
 /******************************hao end*******************************/
 
