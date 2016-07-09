@@ -6154,6 +6154,12 @@ SERVICE ICON LAYOUT
     width: 50%;
 }
 
+.esg-content.eg-grant-element-0-a {
+    height: 5em;
+    overflow: hidden;
+}
+/*首頁 影片 Video hao END*/
+
 /*文章*/
 .team-container {
     /* background-color: #000; */
