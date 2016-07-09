@@ -6652,6 +6652,16 @@ visibility: visible !important;
     border-style: dotted;
 }
 
+.caption a {
+    width: 175px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.caption-wrap .caption {
+    text-align: left;
+}
+
 /*首頁-書籍books END*/
 
 /******************************hao end*******************************/
