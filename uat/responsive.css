@@ -979,6 +979,12 @@
 @media screen and (max-width: 540px){
 /*hao*/
 
+	/*分類 右側 second bar*/
+	.hao-customize div#secondary {
+	    width: 100%;
+	    padding-left: 50px;
+	    display: block;
+	}
 	.social-media-hao {
 	    padding-top: 35px;
 

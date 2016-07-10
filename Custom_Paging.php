@@ -57,7 +57,7 @@
                                             </div>
                                             <div class="portfolio_onhover">
                                                 <h2><a href="<?php the_permalink();?>"><? the_title() ?><a></h2>
-                                                <span><?php echo get_the_date('M j,Y');?></span>
+                                                <span>Posted on <?php echo get_the_date('M j,Y');?></span>
                                                 <p><?php the_excerpt(); ?></p>
                                                 <!--a href="<?php the_permalink();?>">Read More</a-->
                                             </div>

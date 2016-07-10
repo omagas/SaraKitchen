@@ -6262,14 +6262,15 @@ i.fa.fa-circle {
 
 .portfolio_list h2 {
     color: #333;
-    border-bottom: 2px solid #ddd;
+    /*border-bottom: 2px solid #ddd;*/
     margin-bottom: 0px;
 }
 
 
 .portfolio_list .portfolios {
     width: 80%;
-    margin: 0 0 40px 10%;
+    margin: 0 0 40px 5%;
+    border-bottom: 2px dashed #ccc;
 }
 
 
@@ -6639,7 +6640,7 @@ visibility: visible !important;
 }
 
 
-/*首頁-書籍books*/
+/*首頁-書籍books 設定為後台 小工具*/
 
 .ag-container {
     padding-right: 5%;

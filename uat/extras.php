@@ -1505,7 +1505,7 @@ add_action('aglee_pro_team_home_section','aglee_pro_team_section_home_cb');
                                     the_title();
                                 }
                             }elseif ( is_category() ){//haoextras mod
-                                    echo "分類";
+                                    echo "文章POST";
 
                             }else { the_title(); }//if(is_shop()){ woocommerce_page_title();  }else{ the_title(); }?></h1>
                 <?php
