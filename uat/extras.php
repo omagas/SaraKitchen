@@ -287,7 +287,7 @@ add_action('aglee_pro_noslider', 'aglee_pro_nosliderdb');
             <span class="features_title wow fadeInUp" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;"> 讀者見證</span>
             <div class="feature-post-wrap-block clearfix">
                 
-                <div class="feature-post-wrap wow fadeInLeft" data-wow-delay="0.25s" style="visibility: visible; animation-delay: 0.25s; animation-name: fadeInLeft;">
+                <!--div class="feature-post-wrap wow fadeInLeft" data-wow-delay="0.25s" style="visibility: visible; animation-delay: 0.25s; animation-name: fadeInLeft;">
                     <figure class="feature-post-thumbnail">                
                         <a href="<?php echo $permalink1; ?>">
                             <img src="<?php echo $img_src1; ?>" title="Home" alt="Home">
@@ -296,9 +296,7 @@ add_action('aglee_pro_noslider', 'aglee_pro_nosliderdb');
                             <a href="<?php echo $permalink1; ?>"><i class="fa fa-external-link "></i></a>
                         </figcaption>
                     </figure>
-                    <!--a href="<?php echo $permalink1; ?>">
-                        <h2><?php echo $my_title1; ?></h2>
-                    </a-->
+
                     <div class="feature-post-excerpt">
                         <i class="fa fa-quote-left fa-4" aria-hidden="true"></i>
                         <br>
@@ -308,7 +306,7 @@ add_action('aglee_pro_noslider', 'aglee_pro_nosliderdb');
                     <a class="feat_readmore-button readmore-button" href="<?php echo $permalink1; ?>">
                         Read More                
                     </a>
-                </div>
+                </div-->
 
                 <div class="feature-post-wrap wow fadeInLeft" data-wow-delay="0.75s" style="visibility: visible; animation-delay: 0.75s; animation-name: fadeInLeft;">
                     <figure class="feature-post-thumbnail">                
@@ -1359,7 +1357,7 @@ add_action('aglee_pro_team_home_section','aglee_pro_team_section_home_cb');
               <?php 
         } } 
         else {
-            echo '<div id="aglee-breadcrumbs"><div class="ap-container"><a href="' . $homeLink . '">' . '首頁Home' . '</a> ' . $delimiter . ' ';
+            echo '<div id="aglee-breadcrumbs"><div class="ap-container"><a href="' . $homeLink . '">' . $home . '</a> ' . $delimiter . ' ';
           
             if ( is_category() ) {
               $thisCat = get_category(get_query_var('cat'), false);
@@ -1505,7 +1503,7 @@ add_action('aglee_pro_team_home_section','aglee_pro_team_section_home_cb');
                                     the_title();
                                 }
                             }elseif ( is_category() ){//haoextras mod
-                                    echo "文章POST";
+                                    echo "分類";
 
                             }else { the_title(); }//if(is_shop()){ woocommerce_page_title();  }else{ the_title(); }?></h1>
                 <?php
